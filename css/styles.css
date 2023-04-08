@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Poppins:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.cdnfonts.com/css/forte');
+/* @import url('https://fonts.cdnfonts.com/css/forte'); */
+
+@font-face {
+    font-family: 'forte';
+    src: url(../fonts/FORTE.TTF) format('ttf');
+}
 
 :root {
 
@@ -141,6 +146,7 @@ section {
 }
 
 /* -------------------------------------- SECCIÓN INICIO --------------------------------- */
+@media(min-width:10px) {
 .inicio {
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
@@ -180,8 +186,9 @@ section {
     padding: 5rem 2rem; /* Distancia entre los bordes de la caja y el texto */ /* Separacion derecha e izquierda */
     margin-bottom: 3rem; /* Distancia entre dos cajas */ /* Separacion hacia abajo */
 }
-
+}
 /* -------------------------------------- SECCIÓN ¿QUIENES SOMOS? --------------------------------- */
+@media(min-width:10px) {
 .quienesSomos {
     padding: auto; /* Separacion arriba y abajo*/
     background: var(--bg-pastel-color);
@@ -281,7 +288,7 @@ section {
    display: inline-flex;
    justify-content: center;
    align-items: center;
-   width: 5rem;
+   width: auto;
    height: 5rem;
    background: var(--text-color);
    border-radius: 50%;
@@ -309,7 +316,11 @@ section {
     box-shadow: 0 0 1rem var(--main-color);
 }
 
+}
+
 /* -------------------------------------- SECCIÓN NUESTROS PRODUCTOS --------------------------------- */
+@media(min-width:10px) {
+
     .productos {
         background-image: linear-gradient(
             rgba(0,0,0,0.7),
@@ -412,7 +423,11 @@ section {
       }
     
 
+}
+
 /* -------------------------------------- SECCIÓN PERSONALIZÁ TU PEDIDO --------------------------------- */
+@media(min-width:10px) {
+
     .pedido {
         display: flex;
         align-items: center;
@@ -467,8 +482,11 @@ section {
         margin: 1rem 0 3rem;
     }
 
+}
 
 /* -------------------------------------- SECCIÓN COTIZACIÓN --------------------------------- */
+@media(min-width:10px) {
+
     .h2 {
         font-size: 55px;
         line-height: 70px;
@@ -513,8 +531,14 @@ section {
         color: var(--text-oscuro-color);
     }
 
+}
+
+
 /* -------------------------------------- FORMULARIO --------------------------------- */
-#contacto {
+@media(min-width:10px) {
+/*Formulario*/
+
+#formulario {
     background-color: black;
 }
 
@@ -591,9 +615,11 @@ textarea {
     width: 100%;
 }
 
+}
+
+/* Pie de pagina*/
 
 
-/* -------------------------------------- FOOTER --------------------------------- */
 .footer {
     padding: 5.5rem 0;
     background-color: var(--bg-oscuro-color);
@@ -676,6 +702,7 @@ textarea {
 }
 
 /* ------------------------- Resolución menor a 768px -------------------------- */
+
 @media(max-width:768px) {
 
     html {
@@ -731,12 +758,21 @@ textarea {
     .form {
         width: 100%;
     }
+
+    .footerContent {
+        flex-direction: column;
+    }
 }
+
 
 /* ------------------------- Resolución menor a 617px -------------------------- */
 @media (max-width: 617px) {
     .quienesSomosContainer {
-        grid-template-columns: 1fr;
+        grid-template-columns: (1, 1fr);
+    }
+
+    .quienesSomos {
+        width: 100%;
     }
 }
 
