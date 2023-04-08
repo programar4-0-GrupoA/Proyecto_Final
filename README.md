@@ -49,24 +49,24 @@ Desarrollo del Proyecto Integrador Final
 
 El sitio debe contar con las siguientes Secciones:
 
-- [x] Presentación de la Organización
-- [x] Presentación Personal
-- [x] Formulario de Contacto
+- [X] Presentación de la Organización
+- [X] Presentación Personal
+- [X] Formulario de Contacto
 - [ ] Formulario de un Proceso (Ejemplos: Cotización o Reclamo)
 
 El sitio debe contar con un Formulario de Proceso:
-- [] A modo Asistente (Wizard)
-- [] Validación de Campos
-- [] Generación de Resumen (No Editable)
-- [] Exportación a PDF
+- [ ] A modo Asistente (Wizard)
+- [ ] Validación de Campos
+- [ ] Generación de Resumen (No Editable)
+- [ ] Exportación a PDF
 
 El sitio debe utilizar las siguientes Bibliotecas
 Uso de Bibliotecas JS
-- [] JQuery
-- [] Validate.JS
+- [ ] JQuery
+- [ ] Validate.JS
 
 El sitio debe contar con una Integración
-- [] Consumo de API Externa a través de AJAX
-- [] Visualización de los Resultados Obtenidos
+- [ ] Consumo de API Externa a través de AJAX
+- [ ] Visualización de los Resultados Obtenidos
 
 
