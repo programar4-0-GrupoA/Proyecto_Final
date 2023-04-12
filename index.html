@@ -12,7 +12,6 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 
-
     <title>Grupo A - Programar 4.0</title>
 
 </head>
@@ -30,9 +29,13 @@
             <a href="#inicio" class="active">Inicio</a>
             <a href="#quienesSomos">¿Quiénes somos?</a>
             <a href="#productos">Nuestros productos</a>
+            <a href="#shopping">Cotizaciones</a>
             <a href="#pedido">Personalizá tu pedido</a>
-            <a href="#cotizacion">Cotizaciones</a>
             <a href="#contacto">Contactanos</a>
+            <a class="shopping">
+                <img src="image/shopping.svg">
+                <span class="quantity">0</span>
+            </a>
         </nav>
 
     </header>
@@ -242,30 +245,24 @@
         </div>
 
     </section>
-
-    <div class="containerCarrito">
-        <header>
+    <section id="shopping">
+        <div id="shopping" class="containerCarrito">
             <h1>Carrito de compras</h1>
-            <div class="shopping">
-                <img src="image/shopping.svg">
-                <span class="quantity">0</span>
+            <div class="list">
             </div>
-        </header>
-
-        <div class="list">
-
         </div>
-    </div>
-    <div class="card">
-        <h1>Carrito</h1>
-        <ul class="listCard">
-        </ul>
-        <div class="checkOut">
-            <div class="total">0</div>
-            <div class="closeShopping">Cerrar</div>
-        </div>
-    </div>
+        <div class="card">
+            <h1>Carrito</h1>
+            <ul class="listCard">
+            </ul>
+            <div class="checkOut">
+                <div class="total"></div>
+                <div class="closeShopping">Cerrar</div>
+                <button class="pdf-button">Comprar (PDF)</button>
 
+            </div>
+        </div>
+    </section>
     <script src="app.js"></script>
     <section id="pedido" class="pedido">
 
@@ -308,7 +305,7 @@
 
     </section>
 
-    <section id="cotizacion" class="blog container">
+    <section id="blog" class="blog container">
 
         <h2>Blog</h2>
         <p>
@@ -439,6 +436,7 @@
     </footer>
     <script src="js/app.js"></script>
     <script src="./js/scripts.js"></script> <!-- Enlance con JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!--jspdf-->
 </body>
 
 </html>

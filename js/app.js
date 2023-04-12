@@ -6,10 +6,10 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-openShopping.addEventListener('click', ()=>{
+openShopping.addEventListener('click', () => {
     body.classList.add('active');
 })
-closeShopping.addEventListener('click', ()=>{
+closeShopping.addEventListener('click', () => {
     body.classList.remove('active');
 })
 
@@ -18,91 +18,122 @@ let products = [
         id: 1,
         name: 'Torta 1',
         image: 'torta1.jpg',
-        price: 120000
+        price: 3500
     },
     {
         id: 2,
         name: 'Torta 2',
         image: 'torta2.jpg',
-        price: 120000
+        price: 3800
     },
     {
         id: 3,
-        name: 'Torta 4',
+        name: 'Torta chocolate',
         image: 'torta3.jpg',
-        price: 220000
+        price: 3200
     },
     {
         id: 4,
-        name: 'Torta 5',
-        image: 'torta3.jpg',
-        price: 123000
+        name: 'Torta 54',
+        image: 'torta4.com.png',
+        price: 2800
     },
     {
         id: 5,
-        name: 'Torta 6',
-        image: 'torta1.jpg',
-        price: 320000
+        name: 'Torta 5',
+        image: 'torta5.com.png',
+        price: 2800
     },
     {
         id: 6,
-        name: 'Torta 7',
-        image: 'torta2.jpg',
-        price: 120000
-    }
+        name: 'Torta 6',
+        image: 'torta11.com.png',
+        price: 4500
+    },
+    {
+        id: 7,
+        name: 'Torta chocolate',
+        image: 'torta8.com.png',
+        price: 4000
+    },
+    {
+        id: 8,
+        name: 'Torta chocolate',
+        image: 'torta9.com.png',
+        price: 1800
+    },
+    {
+        id: 10,
+        name: 'Torta chocolate',
+        image: 'torta7.com.png',
+        price: 3250
+    },
 ];
-let listCards  = [];
-function initApp(){
-    products.forEach((value, key) =>{
+let listCards = [];
+function initApp() {
+    products.forEach((value, key) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
             <img src="image/${value.image}">
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Agregar al Carrito</button>`;
+            <div class="price">${value.price.toLocaleString()}$</div>
+            <button  onclick="addToCard(${key})" class="boton">Añadir al Carrito</button>`;
         list.appendChild(newDiv);
     })
 }
 initApp();
-function addToCard(key){
-    if(listCards[key] == null){
+function addToCard(key) {
+    if (listCards[key] == null) {
         // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
     }
     reloadCard();
 }
-function reloadCard(){
+function reloadCard() {
     listCard.innerHTML = '';
     let count = 0;
     let totalPrice = 0;
-    listCards.forEach((value, key)=>{
+    listCards.forEach((value, key) => {
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
-        if(value != null){
+        if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
                 <div><img src="image/${value.image}"/></div>
                 <div>${value.name}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div>${value.price.toLocaleString()}$</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>`;
-                listCard.appendChild(newDiv);
+            listCard.appendChild(newDiv);
         }
     })
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
 }
-function changeQuantity(key, quantity){
-    if(quantity == 0){
+function changeQuantity(key, quantity) {
+    if (quantity == 0) {
         delete listCards[key];
-    }else{
+    } else {
         listCards[key].quantity = quantity;
         listCards[key].price = quantity * products[key].price;
     }
     reloadCard();
 }
+
+/*------------------------------------Boton del carrito-------------------------------------------------------------*/
+const misBotones = document.getElementsByClassName('boton');
+
+Array.from(misBotones).forEach(miBoton => {
+    miBoton.addEventListener('click', function () {
+        miBoton.classList.add('clicked');
+        setTimeout(function () {
+            miBoton.classList.remove('clicked');
+        }, 1000);
+    });
+});
+/*---------------------------- PDF---------------------------------------------------------------------*/
