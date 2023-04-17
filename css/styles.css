@@ -490,6 +490,7 @@ section {
         margin: auto;
         transition: 0.5s;
         margin-bottom: 50px;
+        
     }
 
     .shopping {
@@ -497,7 +498,7 @@ section {
         position: relative;
         text-align: right;
         cursor: pointer;
-
+      
     }
 
     .shopping img {
@@ -606,6 +607,7 @@ section {
         border-style: none;
         border-color: #2410066b;
         border-radius: 3px;
+        z-index: 9999;
     }
 
     .active .card {
@@ -614,7 +616,6 @@ section {
 
     .active .containerCarrito {
         transform: translateX(-150px);
-
     }
 
 
@@ -635,7 +636,7 @@ section {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-
+        
     }
 
     .card .checkOut div {
