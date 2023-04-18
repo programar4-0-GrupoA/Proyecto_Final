@@ -136,4 +136,19 @@ Array.from(misBotones).forEach(miBoton => {
         }, 1000);
     });
 });
-/*---------------------------- PDF---------------------------------------------------------------------*/
+/*---------------------------- Agregado de una capa semi-transparente que cubra toda la página al hacer click en el carrito---------------------------------------------------------------------*/
+const btnAbrirCarrito = document.querySelector('#carro-boton');
+const carrito = document.querySelector('#shopping');
+const overlay = document.querySelector('.overlay');
+
+btnAbrirCarrito.addEventListener('click', () => {
+  carrito.classList.add('activo');
+  overlay.style.display = 'block';
+});
+// cierre de carro que oculta la capa semi-transparente
+const btnCerrarCarrito = document.querySelector('#close-boton');
+
+btnCerrarCarrito.addEventListener('click', () => {
+  carrito.classList.remove('activo');
+  overlay.style.display = 'none';
+});

@@ -17,7 +17,7 @@
 </head>
 
 <body class="">
-
+    <div class="overlay"></div>
     <header id="navbar" class="header">
         <div class="logoContainer">
             <img id="logo" class="logo" src="./images/logo.png" alt="">
@@ -30,12 +30,40 @@
             <a href="#quienesSomos">¿Quiénes somos?</a>
             <a href="#productos">Nuestros productos</a>
             <a href="#shopping">Cotizaciones</a>
-            <a href="#pedido">Personalizá tu pedido</a>
             <a href="#contacto">Contactanos</a>
-            <a class="shopping">
+            <a href="#modal2">Iniciar Sesion</a>
+            
+            
+            <a class="shopping" id="carro-boton">
                 <img src="image/shopping.svg">
                 <span class="quantity">0</span>
             </a>
+            <section id="modal2" class="modal2">
+                <div class="modal-container">
+                    <figure class="modal__picture">
+                        
+                        
+                    </figure>
+        
+                    <h2 class="modal__tittle"> Datos de usuario
+                        <span class="modal__tittle modal__tittle--bold"></span>
+                    </h2>
+        
+                    <p class="modal__paragraph"><div class="formContainer">
+                        <form class="form2">
+            
+                            <input type="text" id="formNombre" class="box" placeholder="Usuario">
+                            <input type="password" id="formApellido" class="box" placeholder="Contraseña">
+                            
+            
+                            <input type="submit" value="Enviar" class="submit">
+            
+                        </form></p>
+        
+                    <a href="#boton-container" id="boton-modal" class="modal__close">¡De acuerdo!</a>
+                </div>
+                </div>
+            </section>
         </nav>
 
     </header>
@@ -46,7 +74,6 @@
             <p>
                 Descubre los mejores postres, pasteles y más para satisfacer tu antojo dulce
             </p>
-            <a href="#" class="btn-1">Contactanos</a>
         </div>
     </section>
 
@@ -125,7 +152,7 @@
                 <div class="quienesSomosBox">
                     <img src="./images/miembro2.jpg" alt="Portafolio personal">
                     <div class="quienesSomosLayer">
-                        <h4>Lucho</h4>
+                        <h4>Rodrigo Avila</h4>
                         <p>
                             Chef pastelero
                         </p>
@@ -140,9 +167,9 @@
                 <div class="quienesSomosBox">
                     <img src="./images/miembro6.jpg" alt="Portafolio personal">
                     <div class="quienesSomosLayer">
-                        <h4>Rodri</h4>
+                        <h4>Lucho</h4>
                         <p>
-                            Repostero
+                            Ayudante de cocina
                         </p>
                         <div class="socialMedia">
                             <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -240,7 +267,6 @@
                 </div>
             </div>
 
-            <a href="#" class="btn-1">Informacion</a>
 
         </div>
 
@@ -257,7 +283,7 @@
             </ul>
             <div class="checkOut">
                 <div class="total"></div>
-                <div class="closeShopping">Cerrar</div>
+                <div class="closeShopping" id="close-boton">Cerrar</div>
                 <a href="#modal" class="pdf-button"> Comprar (PDF) </a>
     </section>
 
@@ -320,7 +346,6 @@
                 </div>
             </div>
 
-            <a href="#" class="btn-2">¡Armá ya tu torta!</a>
 
     </section>
 
