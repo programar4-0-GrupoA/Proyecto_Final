@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/factura.css">
+
+
+</head>
+
+<body>
+    <div class="factura">
+        <div class="headFactura">
+            <div class="logo">
+                <h1>Sugar Rush</h1>
+                <p>Email: atencion@sugarrush.com</p>
+                <p>Tel.: +54 11 45454545</p>
+            </div>
+            <div class="numero">
+                <h2>FACTURA Nro</h2>
+                <h2>0000-0000-0001</h2>
+            </div>
+        </div>
+
+        <section class="cliente">
+            <div class="datosCliente" id="datosCliente">
+                <h2>CLIENTE</h2>
+                <div class="nombre">
+                    <label id=>Nombre: </label>
+                </div>
+                <div class="direccion">
+                    <label>Dirección: </label>
+                </div>
+                <div class="telefono">
+                    <label>Teléfono: </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos">
+            <div class="tabla">
+                <table class="tablaProductos">
+                    <thead>
+                        <tr>
+                            <th class="cant">Cantidad</th>
+                            <th class="desc">Descripción</th>
+                            <th class="prec">Precio Un</th>
+                            <th class="subt">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="prod">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/html2pdf.bundle.min.js"></script>
+    <script src="./js/tabla.js"></script>
+</body>
+
+<button id="btnGuardarPdf">IMRPIMIR</button>
+
+</html>

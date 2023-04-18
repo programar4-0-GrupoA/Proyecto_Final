@@ -12,19 +12,24 @@ Desarrollo del Proyecto Integrador Final
 
 ## Estructura del Proyecto
 
-- Se añadió el archivo principal del proyecto (index.html).
-- Se añadió la carpeta css que contiene el archivo de estilos (style.css).
-- Se añadió la carpeta js que contiene el archivo de scripts (scripts.js).
-- Se añadió la carpeta resources que contendrá las imágenes y recursos adicionales del proyecto.
+- css
+    - styles.css
+- fonts
+    - FORTE.ttf
+- images
+    - 20 archivos
+- js
+    - scripts.js
+- index.html
+- README.md
 
-### SECCIONES (Tentativo)
+## SECCIONES
+- Inicio
 - ¿Quiénes somos?
-- El Equipo
-- Productos destacados
-- Recetas
-- Cotización (Un formulario para tipo presupuesto según los productos y cantidades)
-- Tortas a medida (Formulario con selector de características)
-- Contacto
+- Nuestros Productos
+- Personaliza tu pedido
+- Cotizaciones
+- Contactanos
 
 
 ## Reglas de codificación
@@ -32,13 +37,36 @@ Desarrollo del Proyecto Integrador Final
 - Formato camelCase (Ej: nombreDeVariable).
 - Responsive Design.
 
-## IDEAS PARA EL PROYECTO
+## Cosas por hacer
 
-- Sitio de recetas y pastelería.
-- Formulario de tortas a medida.
-- Sección de packaging.
-- Ideas de paletas de colores (Ver Discord - Canal imagenes-integrador).
-- Selección de íconos (Ver Discord - Canal imagenes-integrador)
-- Idea de diseño guía: https://dribbble.com/shots/1145204-Dessert-Site-Full-Comp/attachments/147747
+- LOGO (Propuestas de diseño)
+- IMAGENES (Creación o descarga de imágenes para mayor variedad)
+- CONTENIDO (Creación de textos para darle más vida al proyecto)
+- Sección "COTIZACIONES" (Ideas de diseño y contenido para esta sección)
+- PEDIDO (Modal para el armado de pedido del cliente)
+
+## Requerimientos del Trabajo Práctico Integrador
+
+El sitio debe contar con las siguientes Secciones:
+
+- [X] Presentación de la Organización
+- [X] Presentación Personal
+- [X] Formulario de Contacto
+- [ ] Formulario de un Proceso (Ejemplos: Cotización o Reclamo)
+
+El sitio debe contar con un Formulario de Proceso:
+- [ ] A modo Asistente (Wizard)
+- [ ] Validación de Campos
+- [ ] Generación de Resumen (No Editable)
+- [ ] Exportación a PDF
+
+El sitio debe utilizar las siguientes Bibliotecas
+Uso de Bibliotecas JS
+- [ ] JQuery
+- [ ] Validate.JS
+
+El sitio debe contar con una Integración
+- [ ] Consumo de API Externa a través de AJAX
+- [ ] Visualización de los Resultados Obtenidos
 
 
