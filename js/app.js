@@ -1,5 +1,6 @@
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
+let comprarCarrito = document.querySelector('.pdf-button');
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
 let body = document.querySelector('body');
@@ -12,6 +13,10 @@ openShopping.addEventListener('click', () => {
 closeShopping.addEventListener('click', () => {
     body.classList.remove('active');
 })
+comprarCarrito.addEventListener('click', () => {
+    body.classList.remove('active'); /*cerrar carrito*/
+})
+
 
 let products = [
     {
@@ -154,3 +159,18 @@ function cerrarCarrito() {
     carrito.classList.remove('activo');
     overlay.style.display = 'none';
 }
+// cierre de modal de inicio de sesion y click para abrir el pdf y cerrar modal
+function cerrarModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+
+  function abrirModal(enlace) {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'block';
+    if (enlace) {
+      window.open(enlace, '_blank');
+      overlay.style.display = 'none';
+    }
+
+  }

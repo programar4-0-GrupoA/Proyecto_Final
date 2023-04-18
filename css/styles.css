@@ -745,6 +745,7 @@ color: #fff;
 
 .list .item img {
     width: 70%;
+    height: 65%;
     border-radius: 50%;
     padding-bottom: 10px;
 }
@@ -875,7 +876,8 @@ color: #fff;
 }
 
 .listCard li img {
-    width: 60%;
+    width: 65%;
+    height: 80%;
     border-radius: 50%;
     margin-top: 1.2rem;
     filter: brightness(1);
@@ -889,6 +891,7 @@ color: #fff;
     margin-right: 0.5rem;
     border-radius: 20%;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 .listCard li button:active:hover {
