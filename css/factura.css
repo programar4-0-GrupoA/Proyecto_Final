@@ -1,15 +1,17 @@
 body {
-    width: 100vw;
+    width: 100%;
 }
 
 .factura {
-    position: absolute;
+    
+    width: 90%;
+    margin: 0 auto;
+    border: black solid;
 
 }
 
 .headFactura {
-    width: 90vw;
-    margin: 0 auto;
+    
     height: 150px;
     display: flex;
     align-items: center;
@@ -17,7 +19,7 @@ body {
 
 .logo {
     position: absolute;
-    left: 40px;
+    left: 100px;
 }
 
 .logo p {
@@ -26,11 +28,11 @@ body {
 
 .numero {
     position: absolute;
-    right: 40px;
+    right: 100px;
 }
 
 .cliente {
-    width: 100vw;
+    width: 100%;
     margin-top: 50px;
 }
 
@@ -56,7 +58,7 @@ body {
 
 .tabla {
     width: 90%;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 .tablaProductos {
     width: 100%;

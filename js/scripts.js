@@ -56,4 +56,5 @@ function guardarArray() {
     localStorage.clear();
     localStorage.setItem('client', JSON.stringify(client));
     localStorage.setItem('lista', JSON.stringify(listCards)); 
+    window.open("#modal", "_self"); 
 }

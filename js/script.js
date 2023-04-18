@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Escuchamos el click del botón
-    const $boton = document.querySelector("#btnCrearPdf");
+    const $boton = document.querySelector("#btnGuardarPdf");
     $boton.addEventListener("click", () => {
+        document.querySelector("#btnGuardarPdf").style.display = "none";
         const $elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
         html2pdf()
             .set({

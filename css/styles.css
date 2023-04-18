@@ -116,7 +116,7 @@ section {
     align-items: center;
     z-index: 100;
     transition: .8s ease;
-    z-index: 2;
+    z-index: 9045;
     
 }
 
@@ -237,8 +237,8 @@ section {
     border-radius: .4em;
 }
 #boton-modal{
-    margin: auto;
-color: rgb(0, 0, 0);
+    margin: 30px auto;
+color: #fff;
 }
 .modal2 {
     position: fixed;
@@ -324,15 +324,41 @@ color: rgb(0, 0, 0);
     line-height: 1.5;
 }
 
-.modal__close {
+.modal__closes {
     display: inline-block;
     border: 1px solid;
-    padding: 1em 2em;
+    padding: 10px 20px;
+    margin: 30px auto;
     text-decoration: none;
     font-weight: 700;
-    color: #333;
+    font-size: large;
+    color: #fff;
     border-radius: .4em;
+    z-index: 9999;
+    
 }
+
+.formContainer {
+    width: 100%;
+    display: flex;
+    padding: auto;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.form2 {
+    width: 100%;
+    display: flexbox;
+    margin: auto;
+    margin-top: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form2 input {
+    width: 80%;
+}
+
 
 /* -------------------------------------- SECCIÓN ¿QUIENES SOMOS? --------------------------------- */
 @media(min-width:10px) {
@@ -776,7 +802,7 @@ color: rgb(0, 0, 0);
     border-style: none;
     border-color: #2410066b;
     border-radius: 3px;
-    z-index: 9999;
+    z-index: 9000;
 }
 
 .active .card {
@@ -1134,7 +1160,7 @@ color: rgb(0, 0, 0);
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #333;
+    background-color: #303030be;
     display: flex;
 
     --opacity: 0;
@@ -1143,6 +1169,8 @@ color: rgb(0, 0, 0);
     opacity: var(--opacity);
     pointer-events: var(--pointer);
     transition: opacity .5s;
+
+    z-index: 9040;
 }
 
 .modal:target {
@@ -1160,6 +1188,7 @@ color: rgb(0, 0, 0);
     text-align: center;
     padding: 2.5em 1.5em;
     border-radius: 1em;
+    z-index: 9050;
 }
 
 .modal:target .modal-container {

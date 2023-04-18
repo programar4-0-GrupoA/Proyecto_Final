@@ -53,3 +53,5 @@ prod.innerHTML += `
         <td class="prec total">TOTAL</td>
         <td class="subt total">$${total}</td>
 `;
+
+localStorage.clear();

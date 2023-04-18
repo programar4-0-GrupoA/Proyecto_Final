@@ -148,7 +148,9 @@ btnAbrirCarrito.addEventListener('click', () => {
 // cierre de carro que oculta la capa semi-transparente
 const btnCerrarCarrito = document.querySelector('#close-boton');
 
-btnCerrarCarrito.addEventListener('click', () => {
-  carrito.classList.remove('activo');
-  overlay.style.display = 'none';
-});
+btnCerrarCarrito.addEventListener('click', cerrarCarrito);
+
+function cerrarCarrito() {
+    carrito.classList.remove('activo');
+    overlay.style.display = 'none';
+}
