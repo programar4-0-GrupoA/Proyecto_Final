@@ -1,0 +1,102 @@
+body {
+    width: 100vw;
+}
+
+.factura {
+    position: absolute;
+
+}
+
+.headFactura {
+    width: 90vw;
+    margin: 0 auto;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    left: 40px;
+}
+
+.logo p {
+    line-height: 5px;
+}
+
+.numero {
+    position: absolute;
+    right: 40px;
+}
+
+.cliente {
+    width: 100vw;
+    margin-top: 50px;
+}
+
+.datosCliente {
+    display: inline-block;
+    padding: 0 25px;
+}
+.nombre {
+    font-size: 20px;
+    width: 100%;
+}
+.direccion {
+    font-size: 20px;
+    width: 65%;
+    margin-right: 40vw;
+    display: inline;
+}
+.telefono {
+    font-size: 20px;
+    width: 35%;
+    display: inline;
+}
+
+.tabla {
+    width: 90%;
+    margin: 0 auto;
+}
+.tablaProductos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border: black 1px solid;
+    border-collapse: collapse;
+}
+
+td {
+    font-size: 18px;
+    border: black 1px solid;
+    border-collapse: collapse;
+}
+
+.cant {
+    width: 15%;
+    text-align: center;
+}
+
+.desc {
+    width: 45%;
+}
+
+.prec {
+    width: 20%;
+    text-align: center;
+}
+
+.subt {
+    width: 20%;
+    text-align: center;
+}
+
+.blanco {
+    border: none;
+}
+.total {
+    font-size: 25px;
+    font-weight: bold;
+}

@@ -43,3 +43,10 @@ window.onscroll = () => {
     menuIcon.classList.remove("bx-x")
     navbar.classList.remove("active");
 };
+
+
+document.querySelector('#btnCrearPdf').addEventListener('click', guardarArray);
+
+function guardarArray() {
+    localStorage.setItem('lista', JSON.stringify(listCards)); 
+}
