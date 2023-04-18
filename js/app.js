@@ -174,3 +174,10 @@ function cerrarModal() {
     }
 
   }
+
+  const modal = document.querySelector('.modal2');
+const closeButton = document.querySelector('.close-modal');
+
+closeButton.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
