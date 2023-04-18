@@ -48,5 +48,12 @@ window.onscroll = () => {
 document.querySelector('#btnCrearPdf').addEventListener('click', guardarArray);
 
 function guardarArray() {
+
+    let nombre = document.querySelector("#nomb");
+    let direccion = document.querySelector("#dir");
+    let telefono = document.querySelector("#tel");
+    let client = [nombre.value, direccion.value, telefono.value];
+    localStorage.clear();
+    localStorage.setItem('client', JSON.stringify(client));
     localStorage.setItem('lista', JSON.stringify(listCards)); 
 }

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Escuchamos el click del botón
     const $boton = document.querySelector("#btnCrearPdf");
     $boton.addEventListener("click", () => {
-        const $elementoParaConvertir = document.querySelector('modal'); // <-- Aquí puedes elegir cualquier elemento del DOM
+        const $elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
         html2pdf()
             .set({
                 margin: 1,
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     letterRendering: true,
                 },
                 jsPDF: {
-                    unit: "in",
+                    unit: "cm",
                     format: "a4",
                     orientation: 'portrait' // landscape o portrait
                 }

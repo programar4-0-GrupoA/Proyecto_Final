@@ -32,13 +32,15 @@ let total = 0;
 
 list.forEach(element => {
 
-    total += element.price;
+    let precio = element.price / element.quantity;
 
+    total += element.price;
+    
     prod.innerHTML += `
         <tr> 
         <td class="cant">${element.quantity}</td>
         <td class="desc">${element.name}</td>
-        <td class="prec">$${element.price}</td>
+        <td class="prec">$${precio}</td>
         <td class="subt">$${element.price}</td>
         </tr>
     `;
