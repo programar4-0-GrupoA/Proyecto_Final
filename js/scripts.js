@@ -60,7 +60,7 @@ function guardarArray() {
 }
 
 
-/* ------------------------------ Cierre de Modal---------------------------------------------- */
+/* ------------------------------ Cierre de Modal ---------------------------------------------- */
 
 var iconoCerrarModal = document.getElementById("cerrarModalIcono");
 iconoCerrarModal.addEventListener("click", cerrarModal);
@@ -71,7 +71,7 @@ function cerrarModal() {
 }
 
 
-/*----------------------Cierre de Modal Registro-------------------------------*/
+/* ---------------------- Cierre de Modal Registro ------------------------------- */
 var iconoCerrarModalRegistro = document.getElementById("cerrarModalIconoRegistro");
 iconoCerrarModalRegistro.addEventListener("click", cerrarModalRegistro);
 
@@ -79,3 +79,32 @@ function cerrarModalRegistro() {
   var modal = document.getElementById("modal2");
   modal.style.display = "none";
 }
+
+/*  --------------------- Slider Video  --------------------- */
+const btns = document.querySelectorAll(".nav-btn");
+const slides = document.querySelectorAll(".video-slide");
+const contents = document.querySelectorAll(".content");
+
+var sliderNav = function(manual){
+    btns.forEach((btn) => {
+        btn.classList.remove("active");
+    });
+
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+    contents.forEach((content) => {
+        content.classList.remove("active");
+    });
+
+    btns[manual].classList.add("active");
+    slides[manual].classList.add("active");
+    contents[manual].classList.add("active");
+}
+
+btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+        sliderNav(i);
+    });
+});
