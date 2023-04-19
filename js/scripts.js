@@ -58,3 +58,24 @@ function guardarArray() {
     localStorage.setItem('lista', JSON.stringify(listCards)); 
     window.open("#modal", "_self"); 
 }
+
+
+/* ------------------------------ Cierre de Modal---------------------------------------------- */
+
+var iconoCerrarModal = document.getElementById("cerrarModalIcono");
+iconoCerrarModal.addEventListener("click", cerrarModal);
+
+function cerrarModal() {
+  var modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
+
+/*----------------------Cierre de Modal Registro-------------------------------*/
+var iconoCerrarModalRegistro = document.getElementById("cerrarModalIconoRegistro");
+iconoCerrarModalRegistro.addEventListener("click", cerrarModalRegistro);
+
+function cerrarModalRegistro() {
+  var modal = document.getElementById("modal2");
+  modal.style.display = "none";
+}

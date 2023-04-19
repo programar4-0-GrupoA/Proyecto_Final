@@ -40,7 +40,7 @@
             <!-- modal de inicio de sesion o registro -->
 
             <section id="modal2" class="modal2">
-                <a href="#" class="close-btn">x</a>
+                <a class="cerrarModalRegistro" id="cerrarModalIconoRegistro"><i class="las la-times"></i></a>
                         <form id="form2" action="/">
                             <h1>Registro</h1>
                             <div class="input-control">
@@ -173,7 +173,7 @@
                 <div class="quienesSomosBox">
                     <img src="./images/miembro6.jpg" alt="Portafolio personal">
                     <div class="quienesSomosLayer">
-                        <h4>Lucho</h4>
+                        <h4>Luciano Correa</h4>
                         <p>
                             Ayudante de cocina
                         </p>
@@ -295,6 +295,7 @@
 
     <section id="modal" class="modal">
         <div class="modal-container">
+            <a class="cerrarModal" id="cerrarModalIcono"><i class="las la-times"></i></a>
             <figure class="modal__picture">
                 <img src="images/enviocake.png" alt="IMAGEN" class="modal__img">
             </figure>
@@ -304,9 +305,18 @@
             </h2>
 
             <p class="modal__paragraph"></p>
-            <label for="nomb">Nombre: </label><input type="text" name="nomb" id="nomb"><br>
-            <label for="dir">Dirección: </label><input type="text" name="dir" id="dir"><br>
-            <label for="tel">Teléfono: </label><input type="text" name="tel" id="tel">
+            <div class="modalForm">
+                <label for="nomb">Nombre: </label>
+                <input type="text" name="nomb" id="nomb" placeholder="Nombre">
+            </div>
+            <div class="modalForm">
+                <label for="dir">Dirección: </label>
+                <input type="text" name="dir" id="dir" placeholder="Dirección">
+            </div>
+            <div class="modalForm">
+                <label for="tel">Teléfono: </label>
+                <input type="number" name="tel" id="tel" placeholder="Teléfono">
+            </div>
 
             <a href="#" class="modal__close" id="btnCrearPdf"
                 onclick="guardarArray(); cerrarModal(); abrirModal('http://127.0.0.1:5501/factura.html');">¡De

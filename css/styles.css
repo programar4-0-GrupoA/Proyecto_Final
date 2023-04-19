@@ -221,27 +221,21 @@ section {
     }
 }
 
-/* Modal de inicio de secion */
+/*----------------------------------------- Modal de inicio de secion ------------------------------------------------ */
 
 .modal2 {
     position: fixed;
-    padding: 10px;
-    background-color: whitesmoke;
-    border-radius: 4px;
-    font-size: 12px;
-    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Poppins', sans-serif;
     --opacity: 0;
     --pointer: none;
 
     opacity: var(--opacity);
     pointer-events: var(--pointer);
-    transition: opacity .5s;
+    transition: opacity .05s;
     
-    /* Nuevas propiedades para centrar el modal */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .modal2:target {
@@ -329,16 +323,10 @@ section {
     font-size: 9px;
     height: 13px;
 }
-.close-btn  {
+.cerrarModalIconoRegistro {      /*Posicionar bien el boton de cerrado*/
     position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px;
-    border-radius: 3px;
-    font-weight: bold;
-    background-color: rgb(110, 114, 110);
-    color: #000000;
-    text-decoration: none;
+    margin-left: 250px;
+    cursor: pointer;
   }
   
   .close-btn:hover {
@@ -1241,7 +1229,23 @@ section {
     border-radius: .4em;
 }
 
-/* Pie de pagina*/
+#cerrarModalIcono {
+    position: absolute;
+    margin-left: 250px;
+    cursor: pointer;
+}
+
+.modalForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+/*----------------------------------- Pie de pagina-------------------------------*/
 
 
 .footer {
