@@ -102,3 +102,20 @@ td {
     font-size: 25px;
     font-weight: bold;
 }
+
+  #btnGuardarPdf {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    margin-top: 20px;
+    margin: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  
+  #btnGuardarPdf:hover {
+    background-color: #4CAF50;
+    color: white;
+  }

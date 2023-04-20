@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
 /* @import url('https://fonts.cdnfonts.com/css/forte'); */
 @font-face {
     font-family: 'forte';
@@ -38,26 +39,22 @@ html {
     scroll-behavior: smooth;
     /* Desplazamiento suave del Boton ScrollTop */
     font-size: 18px;
-    
+
 }
 
 body {
     font-family: 'Nunito', sans-serif;
     font-family: 'Poppins', sans-serif;
-    
 }
 
-section {
-    min-height: 100vh;
-    padding-top: 50px;
-}
 
-  
+
+
 .container {
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
-    
+
 }
 
 /* ----------- BOTONES ----------- */
@@ -117,7 +114,7 @@ section {
     z-index: 100;
     transition: .8s ease;
     z-index: 9045;
-    
+
 }
 
 .header.solido {
@@ -159,6 +156,7 @@ section {
 }
 
 /* -------------------------------------- SECCIÓN INICIO --------------------------------- */
+
 @media(min-width:10px) {
     .inicio {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7),
@@ -218,43 +216,94 @@ section {
         /* Distancia entre dos cajas */
         /* Separacion hacia abajo */
     }
+
+    #inicioIntro {
+        padding: 100px 200px;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: #CE967B;
+
+    }
+
+    #inicioIntro::before {
+        z-index: 777;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #inicioIntro .contentIntro {
+        z-index: 888;
+        color: #CE967B;
+        width: 70%;
+        margin-top: 50px;
+        display: none;
+    }
+
+    #inicioIntro .contentIntro.activeIntro {
+        display: block;
+    }
+
+    #inicioIntro .contentIntro h1 {
+        font-size: 4.5em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 75px;
+        margin-bottom: 40px;
+    }
+    
+    #inicioIntro .contentIntro h1 span {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    #inicioIntro .contentIntro p {
+        margin-bottom: 65px;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    #inicioIntro video {
+        z-index: 000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
 }
 
-/* Modal de inicio de secion */
-
-.boton-container {
-    display: flex;
-    height: 100vh;
-    width: 100%;
+@media (max-width: 1040px) {
+    #inicioIntro {
+        padding: 100px 20px;
+    }
 }
 
-.boton-M {
-    margin: auto;
-    background-color: royalblue;
-    color: #fff;
-    text-decoration: none;
-    padding: 1.2em 3em;
-    border-radius: .4em;
-}
-#boton-modal{
-    margin: 30px auto;
-color: #fff;
-}
+/*----------------------------------------- Modal de inicio de secion ------------------------------------------------ */
+
 .modal2 {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    display: flex;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
     --opacity: 0;
     --pointer: none;
 
     opacity: var(--opacity);
     pointer-events: var(--pointer);
-    transition: opacity .5s;
+    transition: opacity .05s;
+    
 }
 
 .modal2:target {
@@ -262,19 +311,8 @@ color: #fff;
     --pointer: unset;
 }
 
-.modal-container {
-    margin: auto;
-    background-color: #fff;
-    width: 90%;
-    max-width: 600px;
-    max-height: 90%;
-    overflow: hidden;
-    text-align: center;
-    padding: 2.5em 1.5em;
-    border-radius: 1em;
-}
 
-.modal2:target .modal-container {
+.modal2:target {
     animation: show 1s .5s backwards;
 }
 
@@ -285,14 +323,7 @@ color: #fff;
 
 }
 
-.modal__picture {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 400px;
-    margin-bottom: 2em;
-}
-
-.modal2:target .modal__picture {
+.modal2:target {
     animation: scale .5s 1.5s backwards;
 }
 
@@ -303,63 +334,74 @@ color: #fff;
 
 }
 
-.modal__img {
+#form2 {
+    width: 300px;
+    padding-bottom: -50px;
+    margin: 10vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+#form2 h1 {
+    font-size: 15px;
+    color: #0f2027;
+    text-align: center;
+}
+
+#form2 button {
+    padding: 10px;
+    margin-top: 10px;
     width: 100%;
-    display: block;
-
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
 }
 
-.modal__title {
-    font-size: 2.5rem;
-    font-weight: 500;
-}
-
-.modal__title--bold {
-    font-weight: 700;
-}
-
-.modal__paragraph {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    line-height: 1.5;
-}
-
-.modal__closes {
-    display: inline-block;
-    border: 1px solid;
-    padding: 10px 20px;
-    margin: 30px auto;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: large;
-    color: #fff;
-    border-radius: .4em;
-    z-index: 9999;
-    
-}
-
-.formContainer {
-    width: 100%;
+.input-control {
     display: flex;
-    padding: auto;
-    align-items: center;
-    border-radius: 1rem;
+    flex-direction: column;
 }
 
-.form2 {
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
     width: 100%;
-    display: flexbox;
-    margin: auto;
-    margin-top: 35px;
-    justify-content: center;
-    align-items: center;
 }
 
-.form2 input {
-    width: 80%;
+.input-control input:focus {
+    outline: 0;
 }
 
+.input-control.success input {
+    border-color: #09c372;
+}
 
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+.cerrarModalIconoRegistro {      /*Posicionar bien el boton de cerrado*/
+    position: absolute;
+    margin-left: 250px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: #ff0000;
+  }
+  
+  
 /* -------------------------------------- SECCIÓN ¿QUIENES SOMOS? --------------------------------- */
 @media(min-width:10px) {
     .quienesSomos {
@@ -374,7 +416,7 @@ color: #fff;
         /* Alinear contenido */
         align-items: center;
         /* Centrar contenido */
-        
+
 
     }
 
@@ -382,7 +424,7 @@ color: #fff;
         text-align: center;
         /* Centrar contenido */
         margin: 5.6rem;
-        
+
     }
 
     .quienesSomosContent h2 {
@@ -397,7 +439,7 @@ color: #fff;
         margin-bottom: 15px;
         /* Distancia entre dos cajas */
         /* Separacion hacia abajo */
-        
+
     }
 
     .txtP {
@@ -419,7 +461,7 @@ color: #fff;
         margin-bottom: 2.8rem;
         /* Distancia entre dos cajas */
         /* Separacion hacia abajo */
-        
+
     }
 
     .quienesSomosContainer {
@@ -448,7 +490,7 @@ color: #fff;
 
     .quienesSomosBox:hover img {
         transform: scale(1.1);
-        
+
     }
 
     .quienesSomosBox .quienesSomosLayer {
@@ -480,7 +522,7 @@ color: #fff;
         font-size: 16px;
         color: var(--text-claro-color);
         margin: .3rem 0 10px;
-        
+
     }
 
     .quienesSomosLayer a {
@@ -491,7 +533,7 @@ color: #fff;
         height: 5rem;
         background: var(--text-color);
         border-radius: 50%;
-        
+
     }
 
     .socialMedia a {
@@ -513,7 +555,7 @@ color: #fff;
     .socialMedia a:hover {
         background: var(--main-color);
         color: var(--second-bg-color);
-        box-shadow: 0 0 1rem var(--main-color); 
+        box-shadow: 0 0 1rem var(--main-color);
     }
 
 }
@@ -644,10 +686,11 @@ color: #fff;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 3;
-        display: none; /* para ocultar la capa por defecto */
-      }
-      
-      
+        display: none;
+        /* para ocultar la capa por defecto */
+    }
+
+
     .containerCarrito {
         width: 1000px;
         margin: auto;
@@ -674,7 +717,7 @@ color: #fff;
         height: 3px;
         background-color: currentColor;
         top: 2rem;
-        
+
     }
 
     .containerCarrito h1::before {
@@ -745,6 +788,7 @@ color: #fff;
 
 .list .item img {
     width: 70%;
+    height: 65%;
     border-radius: 50%;
     padding-bottom: 10px;
 }
@@ -875,7 +919,8 @@ color: #fff;
 }
 
 .listCard li img {
-    width: 60%;
+    width: 65%;
+    height: 80%;
     border-radius: 50%;
     margin-top: 1.2rem;
     filter: brightness(1);
@@ -889,6 +934,7 @@ color: #fff;
     margin-right: 0.5rem;
     border-radius: 20%;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 .listCard li button:active:hover {
@@ -1018,37 +1064,123 @@ color: #fff;
         margin: 25px 0 45px 0;
     }
 
-    .blog {
-        padding: 100px 0;
-        text-align: center;
-    }
-
-    .blog h2 {
-        text-transform: uppercase;
-
-    }
-
-    .blogContent {
+    #blog {
+        padding: 100px 200px;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        background: #CE967B;
+
     }
 
-    .blog-1 {
-        padding: 15px 55px;
+    #blog::before {
+        z-index: 777;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
     }
 
-    .blog-1 img {
-        width: 250px;
-        border-radius: 15px;
-        margin-bottom: 15px;
+    #blog .content {
+        z-index: 888;
+        color: #CE967B;
+        width: 70%;
+        margin-top: 50px;
+        display: none;
     }
 
-    .blog-1 h3 {
+    #blog .content.active {
+        display: block;
+    }
+
+    #blog .content h1 {
+        font-size: 4.5em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 75px;
+        margin-bottom: 40px;
+    }
+    
+    #blog .content h1 span {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    #blog .content p {
+        margin-bottom: 65px;
+        color: #fff;
         font-size: 25px;
-        color: var(--text-oscuro-color);
     }
 
+    .slider-navigation {
+        z-index: 888;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(80px);
+        margin-bottom: 12px;
+    }
+
+    .slider-navigation .nav-btn {
+        width: 18px;
+        height: 18px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+        transition: 0.3s ease;
+        border: solid black;
+        border-width: 1px;
+        margin-top: 100px;
+    }
+
+    .slider-navigation .nav-btn:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .slider-navigation .nav-btn:hover {
+        transform: scale(1.3);
+    }
+
+    .slider-navigation .nav-btn.active{
+        background: #CE967B;
+    }
+
+    #blog video {
+        z-index: 000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .video-slide {
+        position: absolute;
+        width: 100%;
+        clip-path: circle(0% at 0 50%);
+    }
+
+    .video-slide.active {
+        clip-path: circle(150% at 0 50%);
+        transition: 1s ease;
+        transition-property: clip-path;
+    }
+
+}
+
+@media (max-width: 1040px) {
+    #blog {
+        padding: 100px 20px;
+    }
 }
 
 
@@ -1251,7 +1383,23 @@ color: #fff;
     border-radius: .4em;
 }
 
-/* Pie de pagina*/
+#cerrarModalIcono {
+    position: absolute;
+    margin-left: 250px;
+    cursor: pointer;
+}
+
+.modalForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+/*----------------------------------- Pie de pagina-------------------------------*/
 
 
 .footer {

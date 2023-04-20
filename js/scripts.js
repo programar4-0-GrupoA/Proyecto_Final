@@ -3,11 +3,11 @@
 window.addEventListener('scroll', function() {
     document.getElementById("navbar").classList.toggle("solido", window.scrollY > 100);
 
-    if(window.scrollY > 100){
+    /* if(window.scrollY > 100){
        document.getElementById("logo").src="./images/logoNombre.png"
     } else {
         document.getElementById("logo").src="./images/logo.png"
-    }
+    } */
     
 });
 
@@ -56,5 +56,57 @@ function guardarArray() {
     localStorage.clear();
     localStorage.setItem('client', JSON.stringify(client));
     localStorage.setItem('lista', JSON.stringify(listCards)); 
-    window.open("#modal", "_self"); 
 }
+
+
+/* ------------------------------ Cierre de Modal ---------------------------------------------- */
+
+var iconoCerrarModal = document.getElementById("cerrarModalIcono");
+iconoCerrarModal.addEventListener("click", cerrarModal);
+
+function cerrarModal() {
+  let modal = document.getElementById("modal");
+  modal.style.display = "none";
+  overlay.style.display = "none";
+}
+
+
+/* ---------------------- Cierre de Modal Registro ------------------------------- */
+var iconoCerrarModalRegistro = document.getElementById("cerrarModalIconoRegistro");
+iconoCerrarModalRegistro.addEventListener("click", cerrarModalRegistro);
+
+function cerrarModalRegistro() {
+  var modal = document.getElementById("modal2");
+  modal.style.display = "none";
+  window.location.href = "#inicio";
+  window.location.reload();
+}
+
+/*  --------------------- Slider Video  --------------------- */
+const btns = document.querySelectorAll(".nav-btn");
+const slides = document.querySelectorAll(".video-slide");
+const contents = document.querySelectorAll(".content");
+
+var sliderNav = function(manual){
+    btns.forEach((btn) => {
+        btn.classList.remove("active");
+    });
+
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+    contents.forEach((content) => {
+        content.classList.remove("active");
+    });
+
+    btns[manual].classList.add("active");
+    slides[manual].classList.add("active");
+    contents[manual].classList.add("active");
+}
+
+btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+        sliderNav(i);
+    });
+});

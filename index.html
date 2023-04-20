@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
 
     <title>Grupo A - Programar 4.0</title>
 
@@ -25,7 +25,7 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#inicio" class="active">Inicio</a>
+            <a href="#inicioIntro" class="active">Inicio</a>
             <a href="#quienesSomos">¿Quiénes somos?</a>
             <a href="#productos">Nuestros productos</a>
             <a href="#shopping">Cotizaciones</a>
@@ -37,45 +37,51 @@
                 <img src="image/shopping.svg">
                 <span class="quantity">0</span>
             </a>
+            <!-- modal de inicio de sesion o registro -->
+
             <section id="modal2" class="modal2">
-                <div class="modal-container">
-                    <figure class="modal__picture">
-
-
-                    </figure>
-
-                    <h2 class="modal__tittle"> Datos de usuario
-                        <span class="modal__tittle modal__tittle--bold"></span>
-                    </h2>
-                    <div class="formContainer">
-                        <form class="form2">
-
-                            <input type="text" id="formNombre" class="box" placeholder="Usuario">
-                            <input type="password" id="formApellido" class="box" placeholder="Contraseña">
-
-
-                            <input type="submit" value="Enviar" class="submit"><br> 
-
-
-                            <a href="#boton-container" id="boton-modal" class="modal__closes">Cerrar</a>
+                <a class="cerrarModalRegistro" id="cerrarModalIconoRegistro"><i class="las la-times"></i></a>
+                        <form id="form2" action="/">
+                            <h1>Registro</h1>
+                            <div class="input-control">
+                                <label for="username">Usuario</label>
+                                <input id="username" name="username" type="text">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="text">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="password">Contraseña</label>
+                                <input id="password" name="password" type="password">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="password2">Ingrese nuevamente la contraseña</label>
+                                <input id="password2" name="password2" type="password">
+                                <div class="error"></div>
+                            </div>
+                            <button type="submit">Registrarse</button>
                         </form>
                         
-
-                        
                     </div>
+                </div>
                 </div>
             </section>
         </nav>
 
     </header>
-    <section id="inicio" class="inicio">
-        <div class="inicioContent">
-            <h1>Sugar Rush</h1>
-            <h2><i>Tienda de Postres</i></h2>
-            <p>
-                Descubre los mejores postres, pasteles y más para satisfacer tu antojo dulce
-            </p>
+
+    <section id="inicioIntro" class="blogContainer2">
+        <video class="video-slideIntro" src= "./video/videoIntroCorto.mp4" autoplay muted loop></video>
+        
+        <div class="contentIntro activeIntro">
+            <h1>Bienvenido a<br><span>Sugar Rush</span></h1>
+            <p>Elaboramos y comercializamos productos de pastelería y servicios de catering de calidad, con la tradición del sabor artesanal a fin de satisfacer a nuestros clientes, garantizando con el uso de materia prima de excelente calidad, con esfuerzo para brindar nuestro mejor servicio.</p>
         </div>
+
     </section>
 
     <section id="quienesSomos" class="quienesSomos">
@@ -168,7 +174,7 @@
                 <div class="quienesSomosBox">
                     <img src="./images/miembro6.jpg" alt="Portafolio personal">
                     <div class="quienesSomosLayer">
-                        <h4>Lucho</h4>
+                        <h4>Luciano Correa</h4>
                         <p>
                             Ayudante de cocina
                         </p>
@@ -180,8 +186,6 @@
                     </div>
                 </div>
             </div>
-
-            <a href="#" class="btn-2">Informacion</a>
 
         </div>
 
@@ -290,6 +294,7 @@
 
     <section id="modal" class="modal">
         <div class="modal-container">
+            <a class="cerrarModal" id="cerrarModalIcono"><i class="las la-times"></i></a>
             <figure class="modal__picture">
                 <img src="images/enviocake.png" alt="IMAGEN" class="modal__img">
             </figure>
@@ -299,11 +304,21 @@
             </h2>
 
             <p class="modal__paragraph"></p>
-            <label for="nomb">Nombre: </label><input type="text" name="nomb" id="nomb"><br>
-            <label for="dir">Dirección: </label><input type="text" name="dir" id="dir"><br>
-            <label for="tel">Teléfono: </label><input type="text" name="tel" id="tel">
+            <div class="modalForm">
+                <label for="nomb">Nombre: </label>
+                <input type="text" name="nomb" id="nomb" placeholder="Nombre">
+            </div>
+            <div class="modalForm">
+                <label for="dir">Dirección: </label>
+                <input type="text" name="dir" id="dir" placeholder="Dirección">
+            </div>
+            <div class="modalForm">
+                <label for="tel">Teléfono: </label>
+                <input type="number" name="tel" id="tel" placeholder="Teléfono">
+            </div>
 
-            <a href="./factura.html" target="_blank" class="modal__close" id="btnCrearPdf" onclick="guardarArray()">¡De
+            <a href="#inicio" target="_self" class="modal__close" id="btnCrearPdf"
+                onclick="guardarArray(); cerrarModal(); abrirModal('./factura.html')">¡De
                 acuerdo!</a>
         </div>
         </div>
@@ -311,88 +326,44 @@
     </div>
     </div>
     </section>
-    <script src="app.js"></script>
-    <section id="Propuesta" class="Propuesta">
 
-        <div class="propuestaContent container">
-            <h2>Nuestras Propuestas</h2>
-            <p class="txtP">
-                Las mejores propuestas para cada situacion
+    <section id="blog" class="blogContainer">
+
+        <video class="video-slide active" src="./video/videoCasamiento.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./video/video.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./video/videoInfantil.mp4" autoplay muted loop></video>
+        
+        <div class="content active">
+            <h1>Casamientos<br><span>Nuestra propuesta</span></h1>
+            <p> La torta de casamiento es una de las piezas clave en la celebracion,
+                incluso ocupa un lugar en el timing de boda. Te ayudamos a elegir la torta y la mesa dulce
+                para que puedas cumplir la boda de tus sueños.
             </p>
-
-            <div class="propuestaContainer">
-                <div class="propuestaBox">
-                    <img src="images/TortaFiesta.jpg" alt="" width="400px">
-                    <h3>Pequeños y Grandes Eventos</h3>
-                    <p>
-                        ¡Descubre una experiencia culinaria inolvidable con nuestro servicio de catering!
-                    </p>
-                </div>
-
-                <div class="propuestaBox">
-                    <img src="images/Reservas.jpg" alt="" width="580px">
-                    <h3>Haga su Reserva</h3>
-                    <p>
-                        ¿Necesitas el mejor lugar para tus reuniones de trabajo o con amistades?
-                        ¡Contactanos y haz tu reserva!
-                    </p>
-                </div>
-
-                <div class="propuestaBox">
-                    <img src="images/exibiciondetorta.webp" alt="" width="400px">
-                    <h3>Retiro Inmediato</h3>
-                    <p>
-                        ¡Tortas disponibles en nuestro local!
-                        ¡Haga su pedido o pase a deleitarse!
-                    </p>
-                </div>
-            </div>
-
-
-    </section>
-
-
-    <section id="blog" class="blog container">
-
-        <h2>Blog</h2>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Qui totam, soluta amet quam fugiat repellat eius? Laudantium, ut quibusdam.
-            Quis obcaecati cum adipisci distinctio. Sed tempore laborum est reprehenderit deserunt.
-        </p>
-
-        <div class="blogContent">
-            <div class="blog-1">
-                <img src="images/blog3.jpg" alt="">
-                <h3>Blog 1</h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Qui totam, soluta amet quam fugiat repellat eius? Laudantium, ut quibusdam.
-                    Quis obcaecati cum adipisci distinctio. Sed tempore laborum est reprehenderit deserunt.
-                </p>
-            </div>
-            <div class="blog-1">
-                <img src="images/blog2.jpg" alt="">
-                <h3>Blog 2</h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Qui totam, soluta amet quam fugiat repellat eius? Laudantium, ut quibusdam.
-                    Quis obcaecati cum adipisci distinctio. Sed tempore laborum est reprehenderit deserunt.
-                </p>
-            </div>
-            <div class="blog-1">
-                <img src="images/blog3.jpg" alt="">
-                <h3>Blog 3</h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Qui totam, soluta amet quam fugiat repellat eius? Laudantium, ut quibusdam.
-                    Quis obcaecati cum adipisci distinctio. Sed tempore laborum est reprehenderit deserunt.
-                </p>
-            </div>
-
         </div>
 
-        <a href="#" class="btn-1">Informacion</a>
+        <div class="content">
+            <h1>Cumpleaños de 15<br><span>Nuestra propuesta</span></h1>
+            <p> El cumpleaños de 15 es el mejor momento  para apoyar los sueños que comienzan y
+                las metas que empiezan a trazar en el largo camino de la vida. Te ofrecemos 
+                una mesa dulce llena de color y la torta coronada por un precioso arco de globos 
+                de diferentes tamaños y en las tonalidades elegidas.
+            </p>
+        </div>
+
+        <div class="content">
+            <h1>Cumpleaños Infantiles<br><span>Nuestra propuesta</span></h1>
+            <p> Festejar un año más de vida no sería lo mismo sin una deliciosa y estupenda torta de cumpleaños,
+                brindamos muchas ideas para decorar ese día especial en sus vidas y en la tuya tambien.
+                Contamos con una gran variedad de tematicas, estilos y sabores para sorprenderlos 
+                con sus personajes favoritos.
+            </p>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
 
     </section>
 
@@ -481,6 +452,7 @@
         </a>
 
     </footer>
+    <script src="js/Validate.js" preload></script>
     <script src="js/app.js"></script>
     <script src="./js/scripts.js"></script> <!-- Enlance con JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!--jspdf-->
