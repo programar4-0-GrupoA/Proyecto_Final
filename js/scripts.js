@@ -56,7 +56,6 @@ function guardarArray() {
     localStorage.clear();
     localStorage.setItem('client', JSON.stringify(client));
     localStorage.setItem('lista', JSON.stringify(listCards)); 
-    window.open("#modal", "_self"); 
 }
 
 
@@ -66,10 +65,9 @@ var iconoCerrarModal = document.getElementById("cerrarModalIcono");
 iconoCerrarModal.addEventListener("click", cerrarModal);
 
 function cerrarModal() {
-  var modal = document.getElementById("modal");
+  let modal = document.getElementById("modal");
   modal.style.display = "none";
-  window.location.href = "#inicio";
-  window.location.reload();
+  overlay.style.display = "none";
 }
 
 

@@ -166,8 +166,8 @@ function cerrarModal() {
   }
 
   function abrirModal(enlace) {
-    const modal = document.getElementById('modal');
-    modal.style.display = 'block';
+/*     let modal = document.getElementById('modal');
+    modal.style.display = 'block'; */
     if (enlace) {
       window.open(enlace, '_blank');
       overlay.style.display = 'none';
