@@ -3,11 +3,11 @@
 window.addEventListener('scroll', function() {
     document.getElementById("navbar").classList.toggle("solido", window.scrollY > 100);
 
-    if(window.scrollY > 100){
+    /* if(window.scrollY > 100){
        document.getElementById("logo").src="./images/logoNombre.png"
     } else {
         document.getElementById("logo").src="./images/logo.png"
-    }
+    } */
     
 });
 
