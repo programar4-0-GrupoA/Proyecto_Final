@@ -68,6 +68,8 @@ iconoCerrarModal.addEventListener("click", cerrarModal);
 function cerrarModal() {
   var modal = document.getElementById("modal");
   modal.style.display = "none";
+  window.location.href = "#inicio";
+  window.location.reload();
 }
 
 
@@ -78,6 +80,8 @@ iconoCerrarModalRegistro.addEventListener("click", cerrarModalRegistro);
 function cerrarModalRegistro() {
   var modal = document.getElementById("modal2");
   modal.style.display = "none";
+  window.location.href = "#inicio";
+  window.location.reload();
 }
 
 /*  --------------------- Slider Video  --------------------- */
