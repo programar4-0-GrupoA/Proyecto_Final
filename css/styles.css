@@ -767,6 +767,40 @@ body {
     font-size: 13px;
 }
 
+.product {
+    position: relative;
+}
+
+.product .description {
+    position: absolute;
+    top: -12px;
+    left: 0px;
+    width: 280px;
+    height: 90%;
+    border-radius: 1%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.product:hover .description {
+    display: block;
+    opacity: 1;
+}
+
+.product:hover img {
+    filter: brightness(0.7);
+}
+
+.product:hover button {
+    background-color: var(--nav-hover-color);
+    color: var(white);
+}
+
+
 .list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1163,6 +1197,7 @@ body {
         object-fit: cover;
     }
 
+    
     .video-slide {
         position: absolute;
         width: 100%;

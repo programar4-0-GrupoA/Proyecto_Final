@@ -23,55 +23,64 @@ let products = [
         id: 1,
         name: 'Torta 1',
         image: 'torta1.jpg',
-        price: 3500
+        price: 3500,
+        description: 'aca va la descripcion de cada torta'
     },
     {
         id: 2,
         name: 'Torta 2',
         image: 'torta2.jpg',
-        price: 3800
+        price: 3800,
+        description: 'aca va la descripcion de cada torta'
     },
     {
         id: 3,
         name: 'Torta chocolate',
         image: 'torta3.jpg',
-        price: 3200
+        price: 3200,
+        description: 'aca va la descripcion de cada torta'
     },
     {
         id: 4,
         name: 'Torta 54',
         image: 'torta4.com.png',
-        price: 2800
+        price: 2800,
+        description: 'aca va la descripcion de cada torta'
     },
     {
         id: 5,
         name: 'Torta 5',
         image: 'torta5.com.png',
-        price: 2800
+        price: 2800,
+        description: 'aca va la descripcion de cada torta'
     },
     {
         id: 6,
         name: 'Torta 6',
         image: 'torta11.com.png',
-        price: 4500
+        price: 4500,
+        description: 'aca va la descripcion de cada torta'
     },
     {
         id: 7,
         name: 'Torta chocolate',
         image: 'torta8.com.png',
-        price: 4000
+        price: 4000,
+        description: 'aca va la descripcion de cada torta'
     },
     {
         id: 8,
         name: 'Torta chocolate',
         image: 'torta9.com.png',
-        price: 1800
+        price: 1800,
+        description: 'aca va la descripcion de cada torta'
     },
     {
         id: 10,
         name: 'Torta chocolate',
         image: 'torta7.com.png',
-        price: 3250
+        price: 3250,
+        description: 'aca va la descripcion de cada torta'
     },
 ];
 let listCards = [];
@@ -80,13 +89,17 @@ function initApp() {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="image/${value.image}">
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}$</div>
-            <button  onclick="addToCard(${key})" class="boton">Añadir al Carrito</button>`;
+            <div class="product">
+                <img src="image/${value.image}">
+                <div class="title">${value.name}</div>
+                <div class="price">${value.price.toLocaleString()}$</div>
+                <div class="description">${value.description}</div>
+                <button onclick="addToCard(${key})" class="boton">Añadir al Carrito</button>
+            </div>`;
         list.appendChild(newDiv);
-    })
+    });
 }
+
 initApp();
 function addToCard(key) {
     if (listCards[key] == null) {
