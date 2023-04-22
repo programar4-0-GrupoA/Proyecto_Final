@@ -63,14 +63,20 @@ body {
     display: inline-block;
     /* Los enlaces son de tipo texto, lo convertimos a block para aplicar padding y margin */
     font-size: 1.9rem;
+    /* Tamaño de la letra */
     font-weight: 700;
+    /* Tamaño del Grosor */
     padding: 1rem 1rem;
     background-color: var(--btn-color);
+    /* Color de fondo */
     color: var(--text-oscuro-color);
+    /* Color texto */
     text-transform: uppercase;
     /* Todo el texto a mayuscula */
     transition: .5s ease;
+    /* Transicion */
     border-radius: 10px;
+    /* Redondear borde */
 }
 
 .btn-1:hover {
@@ -99,186 +105,184 @@ body {
     box-shadow: 0 0 3rem #D7BDE2;
 }
 
-
 /* -------------------------------------- HEADER --------------------------------- */
 .header {
     position: fixed;
+    /* Fijamos posicion al scrollear */
     top: 0;
+    /* Lo pegamos hacia arriba */
     left: 0;
+    /* Lo pegamos a la izquierda */
     width: 100vw;
     padding: auto;
     background: var(--bg-oscuro-transp);
+    /* Color de fondo */
     display: flex;
+    /* Ocupa lo largo de la linea del <header> en la pagina */
     justify-content: space-between;
+    /* Espacio separado entre si */
     align-items: center;
-    z-index: 100;
-    transition: .8s ease;
-    z-index: 9045;
-
+    /* Centrar texto */
+    transition: .5s ease;
+    /* Transicion */
+    z-index: 9000;
+    /* Posicion frente a la pagina */
 }
 
 .header.solido {
     background: var(--bg-oscuro-color);
+    /* Color de fondo */
 }
 
-.logoContainer {
+.logoContainer { /* Contenedor del Logo */
     height: 80px;
+    /* Altura */
     width: 25%;
+    /* Ancho */
     display: flex;
+    /* Ocupa lo largo de la linea del <div> en la pagina */
     justify-content: center;
+    /* Centrar contenido */
 }
 
-.logo {
+.logo { /* Imagen Logo */
     height: 100%;
+    /* Altura */
+    margin-left: 10px;
+    /* Separar a la izquierda alrededor del borde de un elemento */
+    margin-top: 5px;
+    /* Separar arriba alrededor del borde de un elemento */
+    padding-bottom: 10px;
+    /* Separar abajo entre el contenido y el borde del elemento */
 }
 
-.navbar {
+.navbar { /* Contenedor navbar */
     padding-right: 5%;
+    /* Separar derecha entre el contenido y el borde del elemento */
 }
 
-.navbar a {
+.navbar a { /* navbar -> Inicio/QuienesSomos/NuestrosProductos/.. */
     font-size: 1.2rem;
+    /* Tamaño texto */
     color: var(--text-claro-color);
+    /* Color */
     margin-left: 2rem;
+    /* Separar izquierda alrededor del borde de un elemento */
     transition: .3s;
-
+    /* Transicion */
 }
 
 .navbar a:hover,
-.navbar a.active {
+.navbar a.active { /* Activar navbar */
     color: var(--nav-hover-color);
+    /* Color */
 }
 
-#menu-icon {
+#menu-icon { 
     font-size: 3.6rem;
+    /* Tamaño */
     color: var(--text-claro-color);
+    /* Color */
     display: none;
+    /* Lo Desaparecemos */
+    cursor: pointer;
+    /*Cambiar curso a estilo mano*/
+    margin-right: 20px;
+    /* Separar derecha alrededor del borde de un elemento */
 }
 
 /* -------------------------------------- SECCIÓN INICIO --------------------------------- */
 
 @media(min-width:10px) {
-    .inicio {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)),
-            var(--bg-imagen);
-        background-position: center bottom;
-        /* Centrar la imagen */
-        background-repeat: no-repeat;
-        /* No repetir la imagen de fondo */
-        background-size: cover;
-        /* Cubrir ancho y altura */
-        width: 100%;
-        padding: auto;
-        display: inline-flex;
-        /* Alinear contenido */
-        justify-content: center;
-        /* Alinear contenido */
-        align-items: center;
-        /* Centrar contenido */
-    }
-
-    .inicioContent {
-        text-align: center;
-        justify-content: center;
-    }
-
-    .inicioContent h1 {
-        font-size: 8rem;
-        line-height: 7rem;
-        font-family: forte;
-        color: var(--text-claro-color);
-        text-transform: uppercase;
-        /* Todo el texto a mayuscula */
-        margin-bottom: 2rem;
-        /* Distancia entre dos cajas */
-        /* Separacion hacia abajo */
-    }
-
-    .inicioContent h2 {
-        font-size: 5rem;
-        line-height: 5rem;
-        color: var(--text-claro-color);
-        text-transform: uppercase;
-        /* Todo el texto a mayuscula */
-        margin-bottom: 3rem;
-        /* Distancia entre dos cajas */
-        /* Separacion hacia abajo */
-    }
-
-    .inicioContent p {
-        font-size: 2rem;
-        color: var(--text-claro-color);
-        padding: 5rem 2rem;
-        /* Distancia entre los bordes de la caja y el texto */
-        /* Separacion derecha e izquierda */
-        margin-bottom: 3rem;
-        /* Distancia entre dos cajas */
-        /* Separacion hacia abajo */
-    }
 
     #inicioIntro {
         padding: 100px 200px;
+        /* Separar abajo entre el contenido y el borde del elemento */
         position: relative;
+        /* Posicionar elemento en su posición de referencia*/
         width: 100%;
+        /* Ancho */
         min-height: 100vh;
         display: flex;
+        /* Ocupar el total de la linea <section> en la pagina */
         justify-content: center;
+        /* Centrar contenido */
         flex-direction: column;
-        background: #CE967B;
-
+        /* Posicionar texto en forma de columna -> uno debajo del otro */
     }
 
     #inicioIntro::before {
         z-index: 777;
-        content: "";
+        /* Posicionar frente a la pagina */
         position: absolute;
+        /* Al mover la caja no conserva el espacio */
         width: 100%;
+        /* Ancho */
         height: 100%;
+        /* Altura */
         top: 0;
+        /* Lo pegamos hacia arriba */
         left: 0;
+        /* Lo pegamos hacia la izquierda */
     }
 
-    #inicioIntro .contentIntro {
+    #inicioIntro .contentIntro { /* Contenedor <h1> y <p>*/
         z-index: 888;
+        /* Posicionar frente a la pagina */
         color: #CE967B;
+        /* Color del texto */
         width: 70%;
+        /* Ancho */
         margin-top: 50px;
-        display: none;
+        /* Separar arriba alrededor del borde de un elemento */
     }
 
-    #inicioIntro .contentIntro.activeIntro {
-        display: block;
-    }
-
-    #inicioIntro .contentIntro h1 {
+    #inicioIntro .contentIntro h1 { /* Bienvenido a */
         font-size: 4.5em;
+        /* Tamaño del titulo */
         font-weight: 900;
+        /* Grosor del titulo */
         text-transform: uppercase;
+        /* Transformar en mayuscula */
         letter-spacing: 5px;
-        line-height: 75px;
+        /* Espacio entre letras */
+        line-height: 80px;
+        /* Espacio entre lineas -> Separa entre "Bienvenido a" y "Sugar Rush" */
         margin-bottom: 40px;
+        /* Separar abajo alrededor del borde de un elemento -> Separa entre <h1> y <p> */
     }
     
-    #inicioIntro .contentIntro h1 span {
+    #inicioIntro .contentIntro h1 span { /* Sugar Rush */
         font-size: 1.2em;
+        /* Tamaño de letra */
         font-weight: 600;
+        /* Grosor de la letra */
     }
 
-    #inicioIntro .contentIntro p {
-        margin-bottom: 65px;
+    #inicioIntro .contentIntro p { /* Parrafo */
+        margin-bottom: 50px;
+        /* Separar abajo alrededor del borde de un elemento -> Separa entre <p> y <section> */
         color: #fff;
+        /* Color texto */
         font-size: 25px;
+        /* Tamaño del texto */
     }
 
-    #inicioIntro video {
+    #inicioIntro video { /* videoIntro*/
         z-index: 000;
+        /* Posicionar frente a la pagina */
         position: absolute;
+        /* Al mover la caja no conserva el espacio */
         top: 0;
+        /* Lo pegamos hacia arriba */
         left: 0;
+        /* Lo pegamos hacia la izquierda */
         width: 100%;
+        /* Ancho */
         height: 100%;
+        /* Altura */
         object-fit: cover;
+        /* Ocupa todo el contenedor*/
     }
     
 }
@@ -1028,186 +1032,167 @@ body {
     background-color: #99654c;
 }
 
-/* -------------------------Seccion Propuesta---------------------------------------------------------------- */
-.propuesta {
-    display: flex;
-    align-items: center;
-    padding: 100px 0;
-    /* Separacion arriba y abajo*/
-    background: var(--bg-pastel-color);
-    min-height: 100vh;
-}
-
-.propuestaContent {
-    text-align: center;
-    /* Centrar contenido */
-}
-
-.propuestaContent h2 {
-    font-size: 60px;
-}
-
-.propuestaContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.propuestaContainer .propuestaBox {
-    flex: 1 1 5rem;
-    background: var(--bg-claro-color);
-    padding: .6rem .4rem .6rem;
-    border-radius: 1rem;
-    text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
-}
-
-.propuestaContainer .propuestaBox:hover {
-    border-color: var(--main-color);
-    transform: scale(1.02);
-}
-
-.propuestaBox h3 {
-    font-size: 2rem;
-}
-
-.propuestaBox p {
-    font-size: 1.2rem;
-    margin: 1rem 0 3rem;
-}
 
 
-
-/* -------------------------------------- SECCIÓN COTIZACIÓN --------------------------------- */
+/* -------------------------------------- SECCIÓN BLOG --------------------------------- */
 @media(min-width:10px) {
 
-    .h2 {
-        font-size: 55px;
-        line-height: 70px;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 16px;
-        color: var(--text-oscuro-color);
-        margin: 25px 0 45px 0;
-    }
-
-    #blog {
+    #blog { /* Seccion Blog */
         padding: 100px 200px;
+        /* Separar Arriba/Abajo & Derecha/Izquierda*/
         position: relative;
         width: 100%;
+        /* Ancho */
         min-height: 100vh;
+        /* Altura */
         display: flex;
+        /* Ocupar todo el ancho de la linea <div> en la pagina */
         justify-content: center;
+        /* Centrar contenido */
         flex-direction: column;
+        /* Posicionamos items uno debajo del otro -> columna */
         background: #CE967B;
+        /* Color de fondo al activar el boton slider */
 
     }
 
     #blog::before {
         z-index: 777;
-        content: "";
+        /* Posicionar al frente de la pagina */
         position: absolute;
         width: 100%;
+        /* Ocupa el total del ancho */
         height: 100%;
-        top: 0;
-        left: 0;
+        /* Ocupa el total de alto */
     }
 
-    #blog .content {
+    #blog .content { /* Contenedor de Casamientos/NuestraPropuestas */
         z-index: 888;
+        /* Posicionar al frente de la pagina */
         color: #CE967B;
+        /* Color texto */
         width: 70%;
+        /* Ancho */
         margin-top: 50px;
+        /* Separar arriba */
         display: none;
+        /* Desaparecemos un contenedor para que se coloque c/u en su respectivo video */
     }
 
     #blog .content.active {
         display: block;
     }
 
-    #blog .content h1 {
-        font-size: 4.5em;
+    #blog .content h1 { /* Casamientos */
+        font-size: 5em;
+        /* Tamaño del titulo */
         font-weight: 900;
+        /* Grosor del titulo */
         text-transform: uppercase;
+        /* Transformar titulo a mayuscula */
         letter-spacing: 5px;
+        /* Espacio entre letras */
         line-height: 75px;
+        /* Espacio entre texto */
         margin-bottom: 40px;
+        /* Separar abajo entre <h1> y <p> */
     }
     
-    #blog .content h1 span {
-        font-size: 1.2em;
+    #blog .content h1 span { /* NuestrasPropuestas */
+        font-size: 1em;
+        /* Tamaño del subtitulo */
         font-weight: 600;
+        /* Grosor del subtitulo */
     }
 
-    #blog .content p {
+    #blog .content p { /* Parrafo */
         margin-bottom: 65px;
+        /* Separar abajo entre <p> y <slider> */
         color: #fff;
+        /* Color del parrafo */
         font-size: 25px;
+        /* Tamaño del parrafo */
     }
 
-    .slider-navigation {
+    .slider-navigation { /* Contenedor Slider */
         z-index: 888;
+        /* Posicionar al frente de la pagina */
         position: relative;
         display: flex;
+        /* Ocupar todo el ancho de la linea <div> en la pagina */
         justify-content: center;
+        /* Centrar slider */
         align-items: center;
-        transform: translateY(80px);
-        margin-bottom: 12px;
+        /* Alinear slider */
+        transform: translateY(120px);
+        /* Posicionar el slider en el eje Y del Contenedor */
     }
 
-    .slider-navigation .nav-btn {
+    .slider-navigation .nav-btn { /*Botones del Slider */
         width: 18px;
+        /* Ancho */
         height: 18px;
+        /* Altura */
         background: #fff;
+        /* Color */
         border-radius: 50%;
+        /* Redondear borde */
         cursor: pointer;
+        /* Mouse estilo manito al posicionarse */
         box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+        /* Sombra minima */
         transition: 0.3s ease;
+        /* Velocidad de transicion */
         border: solid black;
+        /* Borde del boton */
         border-width: 1px;
+        /* Ancho del borde */
         margin-top: 100px;
+        /* Separar <boton slider> de <p> */
     }
 
     .slider-navigation .nav-btn:not(:last-child) {
-        margin-right: 40px;
+        margin-right: 60px;
+        /* Separar botones slider entre si */
     }
 
-    .slider-navigation .nav-btn:hover {
+    .slider-navigation .nav-btn:hover { /* boton slider al posicionarse */
         transform: scale(1.3);
+        /* Agrandar */
     }
 
-    .slider-navigation .nav-btn.active{
+    .slider-navigation .nav-btn.active{ /* Boton Slider seleccionado */
         background: #CE967B;
+        /* Color */
     }
 
-    #blog video {
-        z-index: 000;
-        position: absolute;
+    #blog video { /* Video*/
         top: 0;
+        /* Mantener pegado arriba */
         left: 0;
+        /* Mantener pegado izquierda */
         width: 100%;
+        /* Ocupar todo el ancho */
         height: 100%;
+        /* Ocupar todo el alto */
         object-fit: cover;
+        /* Ocupa el total del contenedor */
     }
 
     
-    .video-slide {
+    .video-slide { /* Efecto circular al pasar video */
         position: absolute;
         width: 100%;
+        /* Ocupa todo el ancho */
         clip-path: circle(0% at 0 50%);
+        /* No ocupa lugar y al activarse se agranda un 50% */
     }
 
     .video-slide.active {
         clip-path: circle(150% at 0 50%);
-        transition: 1s ease;
-        transition-property: clip-path;
+        /* Ocupa el Total del video y al activarse se achica un 50% */
+        transition: 1.3s ease;
+        /* Velocidad de transicion */
     }
 
 }
@@ -1437,80 +1422,114 @@ body {
 /*----------------------------------- Pie de pagina-------------------------------*/
 
 
-.footer {
+.footer { /* Pie de pagina */
     padding: 5.5rem 0;
+    /* Separar arriba y abajo */
     background-color: var(--bg-oscuro-color);
+    /* Color de fondo */
 }
 
-.footerContent {
+.footerContent { /* Contenedor del pie de pagina */
     display: flex;
+    /* Ocupar todo el ancho de la linea <div> que ocupa en la pagina */
     justify-content: space-between;
+    /* Repartir el espacio sobrante de su contenedor de manera igual */
     margin: auto 5.5rem;
     /* Separa a la derecha */
 }
 
-.footerContent i {
+.footerContent i { /* iconos sociales */
     color: #FAEc8f;
+    /* Color */
     font-size: 1.2rem;
+    /* Tamaño */
     margin-right: 1rem;
+    /* Separar abajo entre si */
 }
 
-.link h3 {
+.link h3 { /* Direccion/Telefono/Email */
     font-size: 26px;
+    /* Tamaño de la letra */
     color: var(--text-claro-color);
+    /* Color titulo */
     margin-bottom: 15px;
+    /* Separar abajo del titulo */
 }
 
-.link li {
+.link li { /* Datos -> Direccion/Telefono/Email */
     font-size: 1.2rem;
+    /* Tamaño de la letra */
     color: var(--text-claro-color);
+    /* Color letra */
     display: block;
+    /* Ocupa el ancho maximo del contenedor */
     margin-bottom: 1rem;
+    /* Separar abajo */
 }
 
-.link a {
+.link a { /* Facebook/Twitter/intagram/Youtube */
     font-size: 1.2rem;
+    /* Tamaño de la letra */
     color: var(--text-claro-color);
+    /* Color de la letra */
     display: block;
+    /* Ocupa el ancho maximo del contenedor */
     margin-bottom: 1rem;
+    /* Separar abajo */
 }
 
-.maps iframe {
+.maps iframe { /* GoogleMaps */
     margin-top: 1.2rem;
+    /* Separar arriba */
     margin-bottom: 2.3rem;
+    /* Separar abajo */
     width: 100%;
+    /* Ocupa el total del contenedor */
     height: 19.5rem;
+    /* Altura */
 }
 
-.scrollTop {
+.scrollTop { /* ContenedorFlecha */
     width: 2rem;
+    /* Ancho */
     height: 2rem;
-    z-index: 100;
+    /* Altura */
     text-decoration: none;
+    /* Sacar hipervinculo */
     background-color: #faec8f;
+    /* Color de fondo */
     border-radius: 5px;
+    /* Redondear el borde */
     position: fixed;
+    /* Fijar elemento en la pagina al hacer scroll */
     display: flex;
+    /* Ocupar todo el ancho de la linea <a> en la pagina */
     float: right;
     /* Tirarlo a la derecha */
     margin-top: 1rem;
     /* Separar arriba */
     margin-right: 1rem;
-    /* Separar de la pagina */
+    /* Separar derecha de la pagina */
     bottom: 6.2rem;
     right: 1rem;
+    z-index: 10000;
+    /* Posicionar al frente de toda la pagina */
 }
 
-.scrollTop:hover {
+.scrollTop:hover { /* Al apoyar mouse en contenedorFlecha */
     background-color: var(--btn-color);
+    /* Color de fondo */
     box-shadow: 0 0 1rem var(--btn-color);
+    /* Sombreado de color */
 }
 
-.arrow {
+.arrow { /* Flecha */
     margin: auto;
-    /* Centrar flecha */
+    /* Centrar */
     width: 1.5rem;
+    /* Ancho */
     height: 1.5rem;
+    /* Altura */
 }
 
 
