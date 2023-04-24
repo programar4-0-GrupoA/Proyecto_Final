@@ -300,6 +300,7 @@ body {
         /* Altura */
         object-fit: cover;
         /* Ocupa todo el contenedor*/
+        filter: brightness(70%);
     }
 
 }
@@ -768,7 +769,7 @@ body {
         width: 120px;
         height: 3px;
         background-color: currentColor;
-        top: 2rem;
+        top: 3.5rem;
 
     }
 
@@ -1246,6 +1247,7 @@ body {
         /* Ocupa todo el ancho */
         clip-path: circle(0% at 0 50%);
         /* No ocupa lugar y al activarse se agranda un 50% */
+        filter: brightness(70%);
     }
 
     .video-slide.active {
@@ -1698,3 +1700,22 @@ body {
         padding: 0 0;
     }
 }
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 2px;
+    left: 5px; /* ajustar la propiedad "right" para mover el botón hacia la derecha */
+    z-index: 9999;
+    animation: move-whatsapp 3s ease-in-out alternate infinite;
+  }
+ 
+  @keyframes move-whatsapp {
+    from { transform: translateY(-3px); }
+    to { transform: translateY(3px); }
+  }
+  
+  .whatsapp-button i {
+    font-size: 4rem; /* ajustar la propiedad "font-size" para cambiar el tamaño del icono */
+    color: #25D366;
+  }
+  
