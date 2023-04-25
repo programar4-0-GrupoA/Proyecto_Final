@@ -15,11 +15,23 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/productos.js"></script>
 
-    <title>Grupo A - Programar 4.0</title>
+    <title>Grupo A - Programar 4.0 final</title>
 
 </head>
 
-<body class="">
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="overlay"></div>
     <header id="navbar" class="header">
         <div class="logoContainer">
@@ -31,8 +43,7 @@
         <nav class="navbar">
             <a href="#inicioIntro" class="active">Inicio</a>
             <a href="#quienesSomos">¿Quiénes somos?</a>
-            <a href="#productos">Nuestros productos</a>
-            <a href="#shopping">Cotizaciones</a>
+            <a href="#shopping">Nuestro Productos</a>
             <a href="#blog">Blog</a>
             <a href="#contacto">Contactanos</a>
             <a href="#login">Iniciar Sesion</a>
@@ -44,7 +55,7 @@
             </a>
             <!-- modal de inicio de sesion o registro -->
 
-            <!-- <section id="modal2" class="modal2">
+            <section id="modal2" class="modal2">
                 <a class="cerrarModalRegistro" id="cerrarModalIconoRegistro"><i class="las la-times"></i></a>
                 <form id="form2" action="/">
                     <h1>Registro</h1>
@@ -74,7 +85,7 @@
                 </div>
                 </div>
                 </div>
-            </section> -->
+            </section>
         </nav>
 
     </header>
@@ -91,7 +102,6 @@
 
     </section>
     <!-- ----------------------------------------------------------------------------------------------------------------- -->
-    <a href="#login" class="btn-1">El botón</a>
 
     <div id="login" class="modalLogin">
         <div>
@@ -109,8 +119,8 @@
                     <input id="passwordL" name="passwordL" type="password">
                     <div class="error"></div>
                 </div>
-                <a href="#login2">¿No tenés cuenta? Registrate.</a>
-                <button type="submit">Registrarse</button>
+                <a href="#login2" id="registrate">¿No tenés cuenta? Registrate.</a><br>
+                <button class="btn-4" type="button" onclick="bienvenido()">Registrarse</button>
             </form>
         </div>
     </div>
@@ -142,19 +152,26 @@
                     <input id="password2R" name="password2R" type="password" required>
                     <div class="error"></div>
                 </div>
-                <a href="#login3" onclick="validateInputs()">Siguiente</a>
+                <div class="btn3Container"> 
+                    <a class="btn-3" href="#login3" onclick="validateInputs()">Siguiente</a>
+                    <a class="btn-3" href="#login" onclick="validateInputs()">Atras</a>
+                </div>
             </form>
         </div>
     </div>
 
     <div id="login3" class="modalLogin">
         <div>
-            <a href="#cerrarLogin" title="Cerrar" class="cerrarLogin">X</a>
+           
 
             <form id="form3" action="/">
+
+                <a href="#cerrarLogin" title="Cerrar" class="cerrarLogin">X</a>
                 <h1>Registro</h1>
                 <h2>Datos personales</h2>
+                
                 <div class="input-control">
+                    
                     <label for="name">Nombre</label>
                     <input id="name" name="name" type="text">
                     <div class="error"></div>
@@ -174,7 +191,8 @@
                     <input id="telefono" name="telefono" type="number">
                     <div class="error"></div>
                 </div>
-                <button type="submit">Registrarse</button>
+                <button class="btn-3" type="#cerrarLogin">Registrarse</button>
+
             </form>
         </div>
     </div>
@@ -201,7 +219,7 @@
                         </p>
                         <div class="socialMedia">
                             <a href="#"><i class='bx bxl-facebook'></i></a>
-                            <a href="#"><i class='bx bxl-github'></i></a>
+                            <a href="https://github.com/agros55"><i class='bx bxl-github'></i></a>
                             <a href="#"><i class='bx bxl-linkedin'></i></a>
                         </div>
                     </div>
@@ -238,7 +256,8 @@
                 </div>
 
                 <div class="quienesSomosBox">
-                    <img src="./image/miembro4.jpg" alt="Portafolio personal">
+                    <img src="./image/miembro4.jpg" alt="Portafolio personal" style="-webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);">
                     <div class="quienesSomosLayer">
                         <h4>Lucas</h4>
                         <p>
@@ -260,9 +279,11 @@
                             Chef pastelero
                         </p>
                         <div class="socialMedia">
-                            <a href="https://rodrigo-avila-portfolio.netlify.app/#inicio"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://rodrigo-avila-portfolio.netlify.app/#inicio"><i
+                                    class='bx bxl-facebook'></i></a>
                             <a href="https://github.com/RodriiG28"><i class='bx bxl-github'></i></a>
-                            <a href="https://www.linkedin.com/in/rodrigo-avila-a8b121247/"><i class='bx bxl-linkedin'></i></a>
+                            <a href="https://www.linkedin.com/in/rodrigo-avila-a8b121247/"><i
+                                    class='bx bxl-linkedin'></i></a>
                         </div>
                     </div>
                 </div>
@@ -287,7 +308,7 @@
 
     </section>
 
-    
+
     <section id="shopping">
         <div id="shopping" class="containerCarrito">
             <h1>Carrito de compras</h1>
@@ -349,7 +370,8 @@
             <h1 class="casamiento">Casamientos</h1>
             <h2 class="casamiento">Nuestra propuesta</h2>
             <p> La torta de casamiento es una de las piezas clave en la celebracion,
-                incluso ocupa un lugar muy especifico en el timing de boda. Con nuestra ayuda vas a poder elegir la torta y la mesa dulce
+                incluso ocupa un lugar muy especifico en el timing de boda. Con nuestra ayuda vas a poder elegir la
+                torta y la mesa dulce
                 para que puedas cumplir la boda de tus sueños.
             </p>
         </div>
@@ -381,17 +403,15 @@
     </section>
 
     <section id="contacto">
-
         <div class="formContainer">
             <form class="form">
-
                 <input type="text" id="formNombre" class="box" placeholder="Nombre">
                 <input type="text" id="formApellido" class="box" placeholder="Apellido">
                 <input type="phone" id="formPhone" class="box" placeholder="Teléfono">
                 <input type="email" id="formEmail" class="box" placeholder="Email">
-                <textarea id="mensaje" cols="30" rows="6" class="box" placeholder="Mensaje"></textarea>
+                <textarea id="mensaje" cols="30" rows="6" class="box"></textarea>
 
-                <input type="submit" value="Enviar" class="submit">
+                <input type="submit" id="enviar" value="Enviar" class="submit">
 
             </form>
 
@@ -405,7 +425,7 @@
                             Qui totam, soluta amet quam fugiat repellat eius? Laudantium, ut quibusdam. 
                             Quis obcaecati cum adipisci distinctio. Sed tempore laborum est reprehenderit deserunt.
                         </p> -->
-                    <img src="image/torta1.jpg" class="imgInfo-1" alt="">
+                    <img src="./image/logo.png" class="imgInfo-1" alt="">
 
                 </div>
 
@@ -420,23 +440,23 @@
         <div class="footerContent container">
 
             <div class="link">
-                <h3><i class="las la-map-marker"></i>Dirección</h3>
+                <h3><i class="la la-map-marker"></i>Dirección</h3>
                 <ul>
                     <li><a href="#">Sarmiento 440, CABA</a></li>
                 </ul>
             </div>
 
             <div class="link">
-                <h3><i class="las la-phone"></i>Teléfono</h3>
+                <h3><i class="la la-phone"></i>Teléfono</h3>
                 <ul>
-                    <li>800 478 42 51 69</li>
+                    <li>800 478 42 51 80</li>
                 </ul>
             </div>
 
             <div class="link">
-                <h3><i class="las la-envelope"></i>Email</h3>
+                <h3><i class="la la-envelope"></i>Email</h3>
                 <ul>
-                    <li><a href="#">info@restfood.com</a></li>
+                    <li><a href="#">info@restfood.com.ar</a></li>
                 </ul>
             </div>
 
@@ -451,12 +471,12 @@
 
         </div>
         <div class="whatsapp-button">
-            <a href="https://api.whatsapp.com/send?phone=+541140581870" target="_blank" class="whatsapp-link">
-              <i class='bx bxl-whatsapp'></i>
-              <span class="contact-text">Contáctenos</span>
+            <a href="https://api.whatsapp.com/send?phone=1140581870" target="_blank" class="whatsapp-link">
+                <i class='bx bxl-whatsapp'></i>
+                <span class="contact-text">Contáctenos</span>
             </a>
-          </div>
-          
+        </div>
+
 
         <div class="maps">
             <iframe
@@ -473,11 +493,12 @@
 
     </footer>
 
-    <script src="js/Validate.js" preload></script>
-    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./js/recargaPagina.js"></script>
+    <script src="./js/Validate.js" preload></script>
+    <script src="./js/app.js"></script>
     <script src="./js/scripts.js"></script> <!-- Enlance con JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!--jspdf-->
-
 </body>
 
 </html>
