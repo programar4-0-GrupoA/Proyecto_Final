@@ -43,7 +43,7 @@
     top: -12px;
     left: 0px;
     width: 100%;
-    height: 65%;
+    height: 80%;
     border-radius: 1%;
     padding: 10px;
     background-color: rgba(19, 17, 17, 0.8);
@@ -133,9 +133,9 @@
     top: 0;
     left: 100%;
     width: 25.1%;
-    height: 88%;
+    height: 92%;
     background: linear-gradient(#572e1b, #99654c);
-    margin-top: 5.8%;
+    margin-top: 4%;
     transition: 0.5s;
     border-style: none;
     border-color: #2410066b;
@@ -266,9 +266,13 @@
 }
 
 @media (max-width:1370px) {
+    .active .card {
+        left: calc(100% - 30%);
+    }
     .card {
-        width: 25.1%;
-
+        width: 30%;
+        height: 88%;
+        margin-top: 5.8%;
     }
 
     .listCard {
@@ -280,9 +284,13 @@
 }
 
 @media (max-width:768px) {
+    .active .card {
+        left: calc(100% - 50%);
+    }
     .card {
-        width: 25.1%;
-
+        width: 50%;
+        height: 87%;
+        margin-top: 10.5%;
     }
 
     .listCard {
@@ -294,8 +302,23 @@
 }
 
 @media (max-width:617px) {
+    .active .card {
+        left: calc(100% - 50%);
+    }
     .card {
-        width: 25.1%;
+        width: 50%;
+        height: 87%;
+        margin-top: 10.5%;
+    }
+}
 
+@media screen and (max-width:370px) {
+    .active .card {
+        left: calc(100% - 90%);
+    }
+    .card {
+        width: 90%;
+        height: 87%;
+        margin-top: 24%;
     }
 }
