@@ -111,4 +111,8 @@ btns.forEach((btn, i) => {
     });
 });
 
+function bienvenido() {
+    alert('Inicio de sesión correcto')
+}
+
 
