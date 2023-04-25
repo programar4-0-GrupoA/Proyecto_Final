@@ -19,7 +19,19 @@
 
 </head>
 
-<body class="">
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="overlay"></div>
     <header id="navbar" class="header">
         <div class="logoContainer">
@@ -396,7 +408,7 @@
                 <input type="text" id="formApellido" class="box" placeholder="Apellido">
                 <input type="phone" id="formPhone" class="box" placeholder="Teléfono">
                 <input type="email" id="formEmail" class="box" placeholder="Email">
-                <textarea id="mensaje" cols="30" rows="6" class="box" placeholder="Mensaje"></textarea>
+                <textarea id="mensaje" cols="30" rows="6" class="box"></textarea>
 
                 <input type="submit" id="enviar" value="Enviar" class="submit">
 
@@ -444,7 +456,7 @@
                 <h3><i class="la la-envelope"></i>Email</h3>
                 <ul>
                     <li><a href="#">info@restfood.com.ar</a></li>
-                    </ul>
+                </ul>
             </div>
 
             <div class="link link-2">
@@ -458,7 +470,7 @@
 
         </div>
         <div class="whatsapp-button">
-            <a href="https://api.whatsapp.com/send?phone=+541140581870" target="_blank" class="whatsapp-link">
+            <a href="https://api.whatsapp.com/send?phone=1140581870" target="_blank" class="whatsapp-link">
                 <i class='bx bxl-whatsapp'></i>
                 <span class="contact-text">Contáctenos</span>
             </a>
@@ -480,11 +492,12 @@
 
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/js/recargaPagina.js"></script>
     <script src="js/Validate.js" preload></script>
     <script src="js/app.js"></script>
     <script src="./js/scripts.js"></script> <!-- Enlance con JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!--jspdf-->
-
 </body>
 
 </html>
