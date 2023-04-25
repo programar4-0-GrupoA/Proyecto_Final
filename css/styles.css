@@ -461,8 +461,8 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
-        border: 0px solid transparent;
-        border-image: linear-gradient(45deg, rgba(255, 162, 162, rgba(0, 0, 0, 0)24, 124)) 1;
+        border: 1px solid transparent;
+        border-image: linear-gradient(45deg, rgba(255, 162, 162, rgba(234, 78, 78, 0.207)24, 124)) 1;
     }
 
     .quienesSomosContent {
@@ -1580,9 +1580,9 @@ body {
     /* Separar arriba */
     margin-right: 1rem;
     /* Separar derecha de la pagina */
-    bottom: 6.2rem;
+    bottom: 2rem;
     right: 1rem;
-    z-index: 10000;
+    z-index: 800;
     /* Posicionar al frente de toda la pagina */
 }
 
@@ -1719,3 +1719,19 @@ body {
     color: #25D366;
   }
   
+  .whatsapp-button .contact-text {
+    opacity: 0;
+    position: absolute;
+    left: 3.7rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0.7rem;
+    background-color: #3333336e;
+    color: #fff;
+    border-radius: 0.7rem;
+    transition: opacity 0.4s ease-in-out; /* agregar transición */
+  }
+  
+  .whatsapp-button:hover .contact-text {
+    opacity: 1;
+  }
