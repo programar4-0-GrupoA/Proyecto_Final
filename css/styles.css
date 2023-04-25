@@ -22,8 +22,8 @@
 
     /* ------------- Definición de las variables de imágenes ------------------- */
 
-    --bg-imagen: url(../images/fondoPastelería1.jpg);
-    --bg2-imagen: url(../images/fondoPastelería.jpg);
+    --bg-imagen: url(../image/fondoPastelería1.jpg);
+    --bg2-imagen: url(../image/fondoPastelería.jpg);
 
 }
 
@@ -472,7 +472,7 @@ body {
     /* Alinear contenido */
     align-items: center;
     /* Centrar contenido */
-    background-image: url(/images/fondo2carrito.png);
+    background-image: url(/image/fondo2carrito.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -752,7 +752,7 @@ body {
 }
 
 #shopping {
-    background-image: url(/images/fondo2carrito.png);
+    background-image: url(/image/fondo2carrito.png);
     background-repeat: no-repeat;
     background-size: cover;
     border: 0px solid transparent;
