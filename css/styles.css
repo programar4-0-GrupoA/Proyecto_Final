@@ -46,8 +46,121 @@ body {
     font-family: 'Nunito', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
+.hidden {
+    overflow: hidden;
+}
+.centrado {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
 
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fdd;
+    margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 
 .container {
@@ -88,7 +201,7 @@ body {
 .btn-2 {
     display: inline-block;
     /* Los enlaces son de tipo texto, lo convertimos a block para aplicar padding y margin */
-    font-size: 1.9rem;
+    font-size: 1rem;
     font-weight: 700;
     padding: 1rem 1rem;
     background-color: #F9A7B0;
@@ -103,6 +216,57 @@ body {
     /* Cuando pasamos el mouse sobre los enlaces */
     background-color: #D7BDE2;
     box-shadow: 0 0 3rem #D7BDE2;
+}
+
+.btn-3 {
+    display: inline-block;
+    /* Los enlaces son de tipo texto, lo convertimos a block para aplicar padding y margin */
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 1rem;
+    background-color: rgba(255, 222, 173, 0.699);
+    color: var(--text-oscuro-color);
+    text-transform: uppercase;
+    /* Todo el texto a mayuscula */
+    transition: .5s ease;
+    border-radius: 10px;
+}
+
+.btn-3:hover {
+    /* Cuando pasamos el mouse sobre los enlaces */
+    background-color: rgba(255, 222, 173, 0.699);
+    box-shadow: 0 0 3rem rgba(255, 222, 173, 0.699);
+}
+
+.btn3Container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-4 {
+    display: inline-block;
+    /* Los enlaces son de tipo texto, lo convertimos a block para aplicar padding y margin */
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    background-color: rgba(255, 222, 173, 0.699);
+    color: var(--text-oscuro-color);
+    text-transform: uppercase;
+    /* Todo el texto a mayuscula */
+    transition: .5s ease;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-4:hover {
+    /* Cuando pasamos el mouse sobre los enlaces */
+    background-color: rgba(255, 222, 173, 0.699);
+    box-shadow: 0 0 1rem rgba(255, 222, 173, 0.699);
+}
+
+#registrate {
+    font-size: .8rem;
 }
 
 .socialMedia .bx {
@@ -420,6 +584,11 @@ body {
     margin-bottom: 5px;
 }
 
+.input-control label {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
 .input-control input {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
@@ -479,7 +648,7 @@ body {
     background-size: cover;
     background-position: bottom;
     border: 1px solid transparent;
-    border-image: linear-gradient(45deg, rgba(255, 162, 162, rgba(234, 78, 78, 0.207)24, 124)) 1;
+    border-image: linear-gradient(45deg, rgba(255, 162, 162, rgba(234, 78, 78, 0.207), 124)) 1;
 }
 
 .quienesSomosContent {
@@ -680,6 +849,7 @@ body {
 }
 
 .slide h3 {
+   
     color: var(--text-claro-color);
 }
 
@@ -705,7 +875,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border: 0px solid transparent;
-    border-image: linear-gradient(45deg, rgba(255, 162, 162, rgba(0, 0, 0, 0)24, 124)) 1;
+    border-image: linear-gradient(45deg, rgba(255, 162, 162, rgba(0, 0, 0, 0), 124)) 1;
 }
 
 .containerCarrito {
@@ -804,10 +974,14 @@ body {
     }
 
     #blog .content {
+        font-size: 3rem;
         /* Contenedor de Casamientos/NuestraPropuestas */
         z-index: 888;
         /* Posicionar al frente de la pagina */
         color: #CE967B;
+        background-color: #00000034;
+        border-radius: 10px;
+        padding: 20px;
         /* Color texto */
         width: 70%;
         /* Ancho */
@@ -966,8 +1140,8 @@ body {
             background-position: top;
             background-size: cover;
             /* height: 800px;  */
-            
-           
+
+
 
         }
 
@@ -1573,9 +1747,9 @@ body {
         color: #FFFFFF;
         line-height: 25px;
         position: absolute;
-        right: 12px;
+        right: 44%;
         text-align: center;
-        top: 10px;
+        top: 38%;
         width: 24px;
         text-decoration: none;
         font-weight: bold;

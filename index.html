@@ -19,7 +19,19 @@
 
 </head>
 
-<body class="">
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="overlay"></div>
     <header id="navbar" class="header">
         <div class="logoContainer">
@@ -107,8 +119,8 @@
                     <input id="passwordL" name="passwordL" type="password">
                     <div class="error"></div>
                 </div>
-                <a href="#login2">¿No tenés cuenta? Registrate.</a><br>
-                <button type="button" class="btn-1" onclick="bienvenido()">Iniciar Sesión</button>
+                <a href="#login2" id="registrate">¿No tenés cuenta? Registrate.</a><br>
+                <button class="btn-4" type="button" onclick="bienvenido()">Registrarse</button>
             </form>
         </div>
     </div>
@@ -140,19 +152,26 @@
                     <input id="password2R" name="password2R" type="password" required>
                     <div class="error"></div>
                 </div>
-                <a href="#login3" onclick="validateInputs()">Siguiente</a>
+                <div class="btn3Container"> 
+                    <a class="btn-3" href="#login3" onclick="validateInputs()">Siguiente</a>
+                    <a class="btn-3" href="#login" onclick="validateInputs()">Atras</a>
+                </div>
             </form>
         </div>
     </div>
 
     <div id="login3" class="modalLogin">
         <div>
-            <a href="#cerrarLogin" title="Cerrar" class="cerrarLogin">X</a>
+           
 
             <form id="form3" action="/">
+
+                <a href="#cerrarLogin" title="Cerrar" class="cerrarLogin">X</a>
                 <h1>Registro</h1>
                 <h2>Datos personales</h2>
+                
                 <div class="input-control">
+                    
                     <label for="name">Nombre</label>
                     <input id="name" name="name" type="text">
                     <div class="error"></div>
@@ -173,6 +192,7 @@
                     <div class="error"></div>
                 </div>
                 <button type="submit">Registrarse</button>
+
             </form>
         </div>
     </div>
@@ -389,7 +409,7 @@
                 <input type="text" id="formApellido" class="box" placeholder="Apellido">
                 <input type="phone" id="formPhone" class="box" placeholder="Teléfono">
                 <input type="email" id="formEmail" class="box" placeholder="Email">
-                <textarea id="mensaje" cols="30" rows="6" class="box" placeholder="Mensaje"></textarea>
+                <textarea id="mensaje" cols="30" rows="6" class="box"></textarea>
 
                 <input type="submit" id="enviar" value="Enviar" class="submit">
 
@@ -437,7 +457,7 @@
                 <h3><i class="la la-envelope"></i>Email</h3>
                 <ul>
                     <li><a href="#">info@restfood.com.ar</a></li>
-                    </ul>
+                </ul>
             </div>
 
             <div class="link link-2">
@@ -451,7 +471,7 @@
 
         </div>
         <div class="whatsapp-button">
-            <a href="https://api.whatsapp.com/send?phone=+541140581870" target="_blank" class="whatsapp-link">
+            <a href="https://api.whatsapp.com/send?phone=1140581870" target="_blank" class="whatsapp-link">
                 <i class='bx bxl-whatsapp'></i>
                 <span class="contact-text">Contáctenos</span>
             </a>
@@ -473,11 +493,12 @@
 
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/js/recargaPagina.js"></script>
     <script src="js/Validate.js" preload></script>
     <script src="js/app.js"></script>
     <script src="./js/scripts.js"></script> <!-- Enlance con JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!--jspdf-->
-
 </body>
 
 </html>
