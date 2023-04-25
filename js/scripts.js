@@ -82,12 +82,12 @@ function cerrarModalRegistro() {
     window.location.reload();
 }
 
-/*  --------------------- Slider Video  --------------------- */
-const btns = document.querySelectorAll(".nav-btn");
-const slides = document.querySelectorAll(".video-slide");
-const contents = document.querySelectorAll(".content");
+// /*  --------------------- Slider Video  --------------------- /
+ const btns = document.querySelectorAll(".nav-btn"); // Almacena todos los elementos que tienen la clase .nav-btn / 
+const slides = document.querySelectorAll(".video-slide"); // Almacena todos los elementos que tienen la clase .video-slide / 
+ const contents = document.querySelectorAll(".content"); // Almacena todos los elementos que tienen la clase .content / 
 
-var sliderNav = function (manual) {
+ var sliderNav = function (manual) { // Se define una función llamada sliderNav que recibe un parámetro llamado manual /
     btns.forEach((btn) => {
         btn.classList.remove("active");
     });
@@ -98,11 +98,19 @@ var sliderNav = function (manual) {
 
     contents.forEach((content) => {
         content.classList.remove("active");
-    });
+    }); 
+
+    // / Se realiza un bucle forEach en el que se eliminan las clases active de 
+    // todos los elementos almacenados en las tres constantes (btns, slides y contents), para asegurarse de que solo 
+    // el elemento seleccionado tenga la clase active /
 
     btns[manual].classList.add("active");
     slides[manual].classList.add("active");
     contents[manual].classList.add("active");
+
+    // / Se agrega la clase active al botón, al slide y al content 
+    // que se encuentra en la posición manual en los arrays btns, slides y contents, respectivamente. /
+
 }
 
 btns.forEach((btn, i) => {
@@ -111,8 +119,14 @@ btns.forEach((btn, i) => {
     });
 });
 
-function bienvenido() {
-    alert('Inicio de sesión correcto')
-}
+// Se realiza otro bucle forEach en el que se agregan los eventos click a cada uno de los botones almacenados en la constante btns. 
+//Cuando se hace clic en alguno de los botones, se llama a la función sliderNav y se le pasa el índice del botón como argumento.  */
+
+// Recarga de pagina al darle click al logo de la pagina
+
+const logo = document.getElementById('logo');
+logo.addEventListener('click', () => {
+  location.reload();
+});
 
 

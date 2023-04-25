@@ -265,7 +265,7 @@
 
 }
 
-@media screen and (max-width:1370px) {
+@media (max-width:1370px) {
     .active .card {
         left: calc(100% - 30%);
     }
@@ -283,7 +283,7 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
     .active .card {
         left: calc(100% - 50%);
     }
@@ -301,7 +301,7 @@
     }
 }
 
-@media screen and (max-width:617px) {
+@media (max-width:617px) {
     .active .card {
         left: calc(100% - 50%);
     }
