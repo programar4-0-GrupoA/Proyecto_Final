@@ -163,6 +163,7 @@ body {
     /* Separar arriba alrededor del borde de un elemento */
     padding-bottom: 10px;
     /* Separar abajo entre el contenido y el borde del elemento */
+    cursor: pointer;
 }
 
 .navbar {
@@ -1230,13 +1231,13 @@ body {
 
         .formContainer {
             display: flex;
-            background-image: url(/image/dream_TradingCard.jpg);
+            background-image: url(../image/dream_TradingCard.jpg);
             background-repeat: no-repeat;
-            background-position:top;
+            background-position: top;
             background-size: cover;
             /* height: 800px;  */
-            
-           
+
+
 
         }
 
@@ -1264,6 +1265,10 @@ body {
             padding: 1rem;
             border-radius: 1rem;
             margin-bottom: 1rem;
+        }
+
+        #enviar {
+            cursor: pointer;
         }
 
         .submit {

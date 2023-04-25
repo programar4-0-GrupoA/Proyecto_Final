@@ -265,7 +265,7 @@
 
 }
 
-@media screen and (max-width:1370px) {
+@media (max-width:1370px) {
     .card {
         width: 25.1%;
 
@@ -279,7 +279,7 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
     .card {
         width: 25.1%;
 
@@ -293,14 +293,7 @@
     }
 }
 
-@media screen and (max-width:617px) {
-    .card {
-        width: 25.1%;
-
-    }
-}
-
-@media screen and (max-width:370px) {
+@media (max-width:617px) {
     .card {
         width: 25.1%;
 
