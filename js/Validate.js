@@ -70,3 +70,4 @@ const validateInputs = () => { // validar los campos del formulario.
     }
 
 };
+
