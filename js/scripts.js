@@ -1,14 +1,14 @@
 
 /*  --------------------- Transparencia en la barra de navegación --------------------- */
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     document.getElementById("navbar").classList.toggle("solido", window.scrollY > 100);
 
     /* if(window.scrollY > 100){
-       document.getElementById("logo").src="./images/logoNombre.png"
+       document.getElementById("logo").src="./image/logoNombre.png"
     } else {
-        document.getElementById("logo").src="./images/logo.png"
+        document.getElementById("logo").src="./image/logo.png"
     } */
-    
+
 });
 
 /*  --------------------- Despliegue menú navbar --------------------- */
@@ -32,7 +32,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute("id");
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove("active");
                 document.querySelector("header nav a[href*=" + id + "]").classList.add("active");
@@ -44,18 +44,18 @@ window.onscroll = () => {
     navbar.classList.remove("active");
 };
 
-
+// ---- Pasar los datos del carrito de compras al modelo de PDF ----
 document.querySelector('#btnCrearPdf').addEventListener('click', guardarArray);
 
+// ---- Función para guardar los datos en el localStorage ----
 function guardarArray() {
-
     let nombre = document.querySelector("#nomb");
     let direccion = document.querySelector("#dir");
     let telefono = document.querySelector("#tel");
     let client = [nombre.value, direccion.value, telefono.value];
     localStorage.clear();
     localStorage.setItem('client', JSON.stringify(client));
-    localStorage.setItem('lista', JSON.stringify(listCards)); 
+    localStorage.setItem('lista', JSON.stringify(listCards));
 }
 
 
@@ -65,9 +65,9 @@ var iconoCerrarModal = document.getElementById("cerrarModalIcono");
 iconoCerrarModal.addEventListener("click", cerrarModal);
 
 function cerrarModal() {
-  let modal = document.getElementById("modal");
-  modal.style.display = "none";
-  overlay.style.display = "none";
+    let modal = document.getElementById("modal");
+    modal.style.display = "none";
+    overlay.style.display = "none";
 }
 
 
@@ -76,10 +76,10 @@ var iconoCerrarModalRegistro = document.getElementById("cerrarModalIconoRegistro
 iconoCerrarModalRegistro.addEventListener("click", cerrarModalRegistro);
 
 function cerrarModalRegistro() {
-  var modal = document.getElementById("modal2");
-  modal.style.display = "none";
-  window.location.href = "#inicio";
-  window.location.reload();
+    var modal = document.getElementById("modal2");
+    modal.style.display = "none";
+    window.location.href = "#inicio";
+    window.location.reload();
 }
 
 /*  --------------------- Slider Video  --------------------- */
@@ -87,7 +87,7 @@ const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
 const contents = document.querySelectorAll(".content");
 
-var sliderNav = function(manual){
+var sliderNav = function (manual) {
     btns.forEach((btn) => {
         btn.classList.remove("active");
     });
@@ -110,3 +110,5 @@ btns.forEach((btn, i) => {
         sliderNav(i);
     });
 });
+
+

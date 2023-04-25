@@ -16,7 +16,7 @@ Desarrollo del Proyecto Integrador Final
     - styles.css
 - fonts
     - FORTE.ttf
-- images
+- image
     - 20 archivos
 - js
     - scripts.js
