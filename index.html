@@ -107,8 +107,8 @@
                     <input id="passwordL" name="passwordL" type="password">
                     <div class="error"></div>
                 </div>
-                <a href="#login2">¿No tenés cuenta? Registrate.</a><br>
-                <button type="button" onclick="bienvenido()">Registrarse</button>
+                <a href="#login2" id="registrate">¿No tenés cuenta? Registrate.</a><br>
+                <button class="btn-4" type="button" onclick="bienvenido()">Registrarse</button>
             </form>
         </div>
     </div>
@@ -140,19 +140,26 @@
                     <input id="password2R" name="password2R" type="password" required>
                     <div class="error"></div>
                 </div>
-                <a href="#login3" onclick="validateInputs()">Siguiente</a>
+                <div class="btn3Container"> 
+                    <a class="btn-3" href="#login3" onclick="validateInputs()">Siguiente</a>
+                    <a class="btn-3" href="#login" onclick="validateInputs()">Atras</a>
+                </div>
             </form>
         </div>
     </div>
 
     <div id="login3" class="modalLogin">
         <div>
-            <a href="#cerrarLogin" title="Cerrar" class="cerrarLogin">X</a>
+           
 
             <form id="form3" action="/">
+
+                <a href="#cerrarLogin" title="Cerrar" class="cerrarLogin">X</a>
                 <h1>Registro</h1>
                 <h2>Datos personales</h2>
+                
                 <div class="input-control">
+                    
                     <label for="name">Nombre</label>
                     <input id="name" name="name" type="text">
                     <div class="error"></div>
@@ -173,6 +180,7 @@
                     <div class="error"></div>
                 </div>
                 <button type="submit">Registrarse</button>
+
             </form>
         </div>
     </div>
