@@ -473,7 +473,7 @@ body {
     /* Alinear contenido */
     align-items: center;
     /* Centrar contenido */
-    background-image: url(/image/fondo2carrito.png);
+    background-image: url(../image/fondo2carrito.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -700,7 +700,7 @@ body {
 }
 
 #shopping {
-    background-image: url(/image/fondo2carrito.png);
+    background-image: url(../image/fondo2carrito.png);
     background-repeat: no-repeat;
     background-size: cover;
     border: 0px solid transparent;
