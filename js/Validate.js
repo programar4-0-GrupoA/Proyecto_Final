@@ -1,8 +1,8 @@
 const form2 = document.getElementById('form2');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const username = document.getElementById('usernameR');
+const email = document.getElementById('emailR');
+const password = document.getElementById('passwordR');
+const password2 = document.getElementById('password2R');
 
 form2.addEventListener('submit', e => {
     e.preventDefault();
@@ -33,7 +33,7 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 }
 
-const validateInputs = () => {
+function validateInputs() {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
@@ -48,7 +48,7 @@ const validateInputs = () => {
     if(emailValue === '') {
         setError(email, 'Email is required');
     } else if (!isValidEmail(emailValue)) {
-        setError(email, 'dirección de correo electrónico inválida');
+        setError(email, 'Dirección de correo electrónico inválida');
     } else {
         setSuccess(email);
     }

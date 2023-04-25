@@ -1,9 +1,3 @@
-
-/* 
-document.querySelector('#boton').addEventListener('click', traerDatos);
-
-function traerDatos() { */
-
 const lista = JSON.parse(localStorage.getItem('lista'));
 const cliente = JSON.parse(localStorage.getItem('client'));
 
